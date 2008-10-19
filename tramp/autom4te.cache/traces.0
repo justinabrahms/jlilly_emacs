@@ -1,0 +1,411 @@
+m4trace:configure.ac:30: -1- AC_INIT([Tramp], [2.1.14], [tramp-devel@gnu.org])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([^_?A[CHUM]_])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([_AC_])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([^LIBOBJS$], [do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^AS_FLAGS$])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([^_?m4_])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([^dnl$])
+m4trace:configure.ac:30: -1- m4_pattern_forbid([^_?AS_])
+m4trace:configure.ac:30: -1- AC_SUBST([SHELL], [${CONFIG_SHELL-/bin/sh}])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([SHELL])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^SHELL$])
+m4trace:configure.ac:30: -1- AC_SUBST([PATH_SEPARATOR])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PATH_SEPARATOR])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PATH_SEPARATOR$])
+m4trace:configure.ac:30: -1- AC_SUBST([PACKAGE_NAME], [m4_ifdef([AC_PACKAGE_NAME],      ['AC_PACKAGE_NAME'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PACKAGE_NAME])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.ac:30: -1- AC_SUBST([PACKAGE_TARNAME], [m4_ifdef([AC_PACKAGE_TARNAME],   ['AC_PACKAGE_TARNAME'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PACKAGE_TARNAME])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.ac:30: -1- AC_SUBST([PACKAGE_VERSION], [m4_ifdef([AC_PACKAGE_VERSION],   ['AC_PACKAGE_VERSION'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PACKAGE_VERSION])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.ac:30: -1- AC_SUBST([PACKAGE_STRING], [m4_ifdef([AC_PACKAGE_STRING],    ['AC_PACKAGE_STRING'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PACKAGE_STRING])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.ac:30: -1- AC_SUBST([PACKAGE_BUGREPORT], [m4_ifdef([AC_PACKAGE_BUGREPORT], ['AC_PACKAGE_BUGREPORT'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([PACKAGE_BUGREPORT])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.ac:30: -1- AC_SUBST([exec_prefix], [NONE])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([exec_prefix])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^exec_prefix$])
+m4trace:configure.ac:30: -1- AC_SUBST([prefix], [NONE])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([prefix])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^prefix$])
+m4trace:configure.ac:30: -1- AC_SUBST([program_transform_name], [s,x,x,])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([program_transform_name])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^program_transform_name$])
+m4trace:configure.ac:30: -1- AC_SUBST([bindir], ['${exec_prefix}/bin'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([bindir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^bindir$])
+m4trace:configure.ac:30: -1- AC_SUBST([sbindir], ['${exec_prefix}/sbin'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([sbindir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^sbindir$])
+m4trace:configure.ac:30: -1- AC_SUBST([libexecdir], ['${exec_prefix}/libexec'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([libexecdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^libexecdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([datarootdir], ['${prefix}/share'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([datarootdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^datarootdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([datadir], ['${datarootdir}'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([datadir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^datadir$])
+m4trace:configure.ac:30: -1- AC_SUBST([sysconfdir], ['${prefix}/etc'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([sysconfdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^sysconfdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([sharedstatedir], ['${prefix}/com'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([sharedstatedir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^sharedstatedir$])
+m4trace:configure.ac:30: -1- AC_SUBST([localstatedir], ['${prefix}/var'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([localstatedir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^localstatedir$])
+m4trace:configure.ac:30: -1- AC_SUBST([includedir], ['${prefix}/include'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([includedir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^includedir$])
+m4trace:configure.ac:30: -1- AC_SUBST([oldincludedir], ['/usr/include'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([oldincludedir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^oldincludedir$])
+m4trace:configure.ac:30: -1- AC_SUBST([docdir], [m4_ifset([AC_PACKAGE_TARNAME],
+				     ['${datarootdir}/doc/${PACKAGE_TARNAME}'],
+				     ['${datarootdir}/doc/${PACKAGE}'])])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([docdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^docdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([infodir], ['${datarootdir}/info'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([infodir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^infodir$])
+m4trace:configure.ac:30: -1- AC_SUBST([htmldir], ['${docdir}'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([htmldir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^htmldir$])
+m4trace:configure.ac:30: -1- AC_SUBST([dvidir], ['${docdir}'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([dvidir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^dvidir$])
+m4trace:configure.ac:30: -1- AC_SUBST([pdfdir], ['${docdir}'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([pdfdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^pdfdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([psdir], ['${docdir}'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([psdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^psdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([libdir], ['${exec_prefix}/lib'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([libdir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^libdir$])
+m4trace:configure.ac:30: -1- AC_SUBST([localedir], ['${datarootdir}/locale'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([localedir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^localedir$])
+m4trace:configure.ac:30: -1- AC_SUBST([mandir], ['${datarootdir}/man'])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([mandir])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^mandir$])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([PACKAGE_NAME])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_NAME$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([PACKAGE_NAME], [/* Define to the full name of this package. */
+#undef PACKAGE_NAME])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([PACKAGE_TARNAME])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_TARNAME$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([PACKAGE_TARNAME], [/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([PACKAGE_VERSION])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_VERSION$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([PACKAGE_VERSION], [/* Define to the version of this package. */
+#undef PACKAGE_VERSION])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([PACKAGE_STRING])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_STRING$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([PACKAGE_STRING], [/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING])
+m4trace:configure.ac:30: -1- AC_DEFINE_TRACE_LITERAL([PACKAGE_BUGREPORT])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^PACKAGE_BUGREPORT$])
+m4trace:configure.ac:30: -1- AH_OUTPUT([PACKAGE_BUGREPORT], [/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT])
+m4trace:configure.ac:30: -1- AC_SUBST([DEFS])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([DEFS])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^DEFS$])
+m4trace:configure.ac:30: -1- AC_SUBST([ECHO_C])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([ECHO_C])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^ECHO_C$])
+m4trace:configure.ac:30: -1- AC_SUBST([ECHO_N])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([ECHO_N])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^ECHO_N$])
+m4trace:configure.ac:30: -1- AC_SUBST([ECHO_T])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([ECHO_T])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^ECHO_T$])
+m4trace:configure.ac:30: -1- AC_SUBST([LIBS])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([LIBS])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^LIBS$])
+m4trace:configure.ac:30: -1- AC_SUBST([build_alias])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([build_alias])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^build_alias$])
+m4trace:configure.ac:30: -1- AC_SUBST([host_alias])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([host_alias])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^host_alias$])
+m4trace:configure.ac:30: -1- AC_SUBST([target_alias])
+m4trace:configure.ac:30: -1- AC_SUBST_TRACE([target_alias])
+m4trace:configure.ac:30: -1- m4_pattern_allow([^target_alias$])
+m4trace:configure.ac:36: -1- AC_SUBST([TRAMP_EMACS_MERGE_VERSION])
+m4trace:configure.ac:36: -1- AC_SUBST_TRACE([TRAMP_EMACS_MERGE_VERSION])
+m4trace:configure.ac:36: -1- m4_pattern_allow([^TRAMP_EMACS_MERGE_VERSION$])
+m4trace:configure.ac:39: -1- AC_SUBST([MAKE])
+m4trace:configure.ac:39: -1- AC_SUBST_TRACE([MAKE])
+m4trace:configure.ac:39: -1- m4_pattern_allow([^MAKE$])
+m4trace:configure.ac:52: -1- AC_SUBST([SET_MAKE])
+m4trace:configure.ac:52: -1- AC_SUBST_TRACE([SET_MAKE])
+m4trace:configure.ac:52: -1- m4_pattern_allow([^SET_MAKE$])
+m4trace:configure.ac:55: -1- AC_SUBST([EMACS])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([EMACS])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^EMACS$])
+m4trace:configure.ac:55: -1- AC_SUBST([EMACS_test_emacs])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([EMACS_test_emacs])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^EMACS_test_emacs$])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- AC_SUBST([EMACS_INFO])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([EMACS_INFO])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^EMACS_INFO$])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- AC_SUBST([EMACS_GW])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([EMACS_GW])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^EMACS_GW$])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- AC_SUBST([EMACS_UTILS])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([EMACS_UTILS])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^EMACS_UTILS$])
+m4trace:configure.ac:55: -1- AC_SUBST([TRAMP_EMACS_VERSION_CHECK])
+m4trace:configure.ac:55: -1- AC_SUBST_TRACE([TRAMP_EMACS_VERSION_CHECK])
+m4trace:configure.ac:55: -1- m4_pattern_allow([^TRAMP_EMACS_VERSION_CHECK$])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:55: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:146: AC_EMACS_INFO is expanded from...
+configure.ac:55: the top level])
+m4trace:configure.ac:60: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:60: the top level])
+m4trace:configure.ac:60: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:60: the top level])
+m4trace:configure.ac:60: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:60: the top level])
+m4trace:configure.ac:61: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:61: the top level])
+m4trace:configure.ac:61: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:61: the top level])
+m4trace:configure.ac:61: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:61: the top level])
+m4trace:configure.ac:62: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:62: the top level])
+m4trace:configure.ac:62: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:62: the top level])
+m4trace:configure.ac:62: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:62: the top level])
+m4trace:configure.ac:64: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:64: the top level])
+m4trace:configure.ac:64: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:64: the top level])
+m4trace:configure.ac:64: -1- _m4_warn([obsolete], [The macro `AC_FD_CC' is obsolete.
+You should run autoupdate.], [/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:364: AC_FD_CC is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/m4sugar/m4sh.m4:523: AS_IF is expanded from...
+/var/tmp/autoconf/autoconf-14~76/SRC/autoconf/lib/autoconf/general.m4:1905: AC_CACHE_VAL is expanded from...
+aclocal.m4:51: AC_EMACS_LISP is expanded from...
+aclocal.m4:201: AC_CONTRIB_FILES is expanded from...
+configure.ac:64: the top level])
+m4trace:configure.ac:67: -1- AC_SUBST([TRAMP_CONTRIB_FILES])
+m4trace:configure.ac:67: -1- AC_SUBST_TRACE([TRAMP_CONTRIB_FILES])
+m4trace:configure.ac:67: -1- m4_pattern_allow([^TRAMP_CONTRIB_FILES$])
+m4trace:configure.ac:70: -1- AC_SUBST([MAKEINFO])
+m4trace:configure.ac:70: -1- AC_SUBST_TRACE([MAKEINFO])
+m4trace:configure.ac:70: -1- m4_pattern_allow([^MAKEINFO$])
+m4trace:configure.ac:86: -1- AC_SUBST([TEXI2DVI])
+m4trace:configure.ac:86: -1- AC_SUBST_TRACE([TEXI2DVI])
+m4trace:configure.ac:86: -1- m4_pattern_allow([^TEXI2DVI$])
+m4trace:configure.ac:106: -1- AC_SUBST([INSTALL_INFO])
+m4trace:configure.ac:106: -1- AC_SUBST_TRACE([INSTALL_INFO])
+m4trace:configure.ac:106: -1- m4_pattern_allow([^INSTALL_INFO$])
+m4trace:configure.ac:109: -1- AC_SUBST([INSTALL_INFO])
+m4trace:configure.ac:109: -1- AC_SUBST_TRACE([INSTALL_INFO])
+m4trace:configure.ac:109: -1- m4_pattern_allow([^INSTALL_INFO$])
+m4trace:configure.ac:117: -1- AC_SUBST([INSTALL_CHAPTER])
+m4trace:configure.ac:117: -1- AC_SUBST_TRACE([INSTALL_CHAPTER])
+m4trace:configure.ac:117: -1- m4_pattern_allow([^INSTALL_CHAPTER$])
+m4trace:configure.ac:120: -1- AC_SUBST([JA_MANUAL])
+m4trace:configure.ac:120: -1- AC_SUBST_TRACE([JA_MANUAL])
+m4trace:configure.ac:120: -1- m4_pattern_allow([^JA_MANUAL$])
+m4trace:configure.ac:126: -1- AC_SUBST([prefix])
+m4trace:configure.ac:126: -1- AC_SUBST_TRACE([prefix])
+m4trace:configure.ac:126: -1- m4_pattern_allow([^prefix$])
+m4trace:configure.ac:127: -1- AC_SUBST([prefix_default])
+m4trace:configure.ac:127: -1- AC_SUBST_TRACE([prefix_default])
+m4trace:configure.ac:127: -1- m4_pattern_allow([^prefix_default$])
+m4trace:configure.ac:128: -1- AC_SUBST([datarootdir])
+m4trace:configure.ac:128: -1- AC_SUBST_TRACE([datarootdir])
+m4trace:configure.ac:128: -1- m4_pattern_allow([^datarootdir$])
+m4trace:configure.ac:129: -1- AC_SUBST([datarootdir_default])
+m4trace:configure.ac:129: -1- AC_SUBST_TRACE([datarootdir_default])
+m4trace:configure.ac:129: -1- m4_pattern_allow([^datarootdir_default$])
+m4trace:configure.ac:130: -1- AC_SUBST([datadir])
+m4trace:configure.ac:130: -1- AC_SUBST_TRACE([datadir])
+m4trace:configure.ac:130: -1- m4_pattern_allow([^datadir$])
+m4trace:configure.ac:131: -1- AC_SUBST([datadir_default])
+m4trace:configure.ac:131: -1- AC_SUBST_TRACE([datadir_default])
+m4trace:configure.ac:131: -1- m4_pattern_allow([^datadir_default$])
+m4trace:configure.ac:132: -1- AC_SUBST([lispdir])
+m4trace:configure.ac:132: -1- AC_SUBST_TRACE([lispdir])
+m4trace:configure.ac:132: -1- m4_pattern_allow([^lispdir$])
+m4trace:configure.ac:133: -1- AC_SUBST([lispdir_default])
+m4trace:configure.ac:133: -1- AC_SUBST_TRACE([lispdir_default])
+m4trace:configure.ac:133: -1- m4_pattern_allow([^lispdir_default$])
+m4trace:configure.ac:134: -1- AC_SUBST([infodir])
+m4trace:configure.ac:134: -1- AC_SUBST_TRACE([infodir])
+m4trace:configure.ac:134: -1- m4_pattern_allow([^infodir$])
+m4trace:configure.ac:135: -1- AC_SUBST([infodir_default])
+m4trace:configure.ac:135: -1- AC_SUBST_TRACE([infodir_default])
+m4trace:configure.ac:135: -1- m4_pattern_allow([^infodir_default$])
+m4trace:configure.ac:139: -1- AC_SUBST([FTP_UPLOAD])
+m4trace:configure.ac:139: -1- AC_SUBST_TRACE([FTP_UPLOAD])
+m4trace:configure.ac:139: -1- m4_pattern_allow([^FTP_UPLOAD$])
+m4trace:configure.ac:146: -1- AC_SUBST([TRAMP_CLEAN_FILES])
+m4trace:configure.ac:146: -1- AC_SUBST_TRACE([TRAMP_CLEAN_FILES])
+m4trace:configure.ac:146: -1- m4_pattern_allow([^TRAMP_CLEAN_FILES$])
+m4trace:configure.ac:155: -1- AC_SUBST([TRAMP_CONFIG_FILES])
+m4trace:configure.ac:155: -1- AC_SUBST_TRACE([TRAMP_CONFIG_FILES])
+m4trace:configure.ac:155: -1- m4_pattern_allow([^TRAMP_CONFIG_FILES$])
+m4trace:configure.ac:156: -1- AC_CONFIG_FILES([$TRAMP_CONFIG_FILES])
+m4trace:configure.ac:158: -1- AC_SUBST([LIB@&t@OBJS], [$ac_libobjs])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([LIB@&t@OBJS])
+m4trace:configure.ac:158: -1- m4_pattern_allow([^LIB@&t@OBJS$])
+m4trace:configure.ac:158: -1- AC_SUBST([LTLIBOBJS], [$ac_ltlibobjs])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([LTLIBOBJS])
+m4trace:configure.ac:158: -1- m4_pattern_allow([^LTLIBOBJS$])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([top_builddir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([srcdir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([abs_srcdir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([top_srcdir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([abs_top_srcdir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([builddir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([abs_builddir])
+m4trace:configure.ac:158: -1- AC_SUBST_TRACE([abs_top_builddir])

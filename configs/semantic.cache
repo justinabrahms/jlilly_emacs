@@ -1,0 +1,61 @@
+;; Object configs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "configs/"
+  :tables (list 
+    (semanticdb-table "cfg_cedet.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_cedet.el"
+    )
+   (semanticdb-table "cfg_tramp.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_tramp.el"
+    )
+   (semanticdb-table "cfg_ecb.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_ecb.el"
+    )
+   (semanticdb-table "cfg_linum.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_linum.el"
+    )
+   (semanticdb-table "cfg_keybindings.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_keybindings.el"
+    )
+   (semanticdb-table "cfg_css_mode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_css_mode.el"
+    )
+   (semanticdb-table "cfg_javascript.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_javascript.el"
+    )
+   (semanticdb-table "cfg_highlight_current_line.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("highlight-current-line" include nil nil [1 34]) ("custom-set-variables" code nil nil [36 125]) ("custom-set-faces" code nil nil [127 205]) ("cond" code nil nil [373 496]))
+    :file "cfg_highlight_current_line.el"
+    :pointmax 496
+    )
+   (semanticdb-table "cfg_browser.el"
+    :major-mode 'emacs-lisp-mode
+    :tags 'nil
+    :file "cfg_browser.el"
+    )
+   (semanticdb-table "cfg_python.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("setq" code nil nil [45 113]) ("setq" code nil nil [114 191]) ("add-to-list" code nil nil [192 254]) ("setq" code nil nil [255 358]) ("python-mode" function (:prototype-flag t :user-visible-flag t) nil [359 421]) ("doctest-mode" function (:prototype-flag t :user-visible-flag t) nil [422 507]) ("pycomplete" include nil nil [508 529]) ("pymacs" include nil nil [547 564]) ("pymacs-load" code nil nil [565 597]) ("define-skeleton" code nil nil [608 714]) ("define-key" code nil nil [715 769]))
+    :file "cfg_python.el"
+    :pointmax 769
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre4"
+  :semanticdb-version "2.0pre4"
+  )

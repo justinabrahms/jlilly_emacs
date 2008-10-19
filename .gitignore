@@ -1,0 +1,3 @@
+.DS_Store
+*.elc
+packages/js2-mode/build/

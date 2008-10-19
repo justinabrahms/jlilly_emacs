@@ -1,0 +1,2 @@
+;; Line numbering
+(require 'linum)

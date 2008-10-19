@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/svn/!svn/ver/56/trunk
+END
+js2-mode.el
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/55/trunk/js2-mode.el
+END
+js2-scan.el
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/50/trunk/js2-scan.el
+END
+js2-ast.el
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/50/trunk/js2-ast.el
+END
+js2-highlight.el
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/50/trunk/js2-highlight.el
+END
+js2-messages.el
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/50/trunk/js2-messages.el
+END
+release-notes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/55/trunk/release-notes.txt
+END
+js2-parse.el
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/56/trunk/js2-parse.el
+END
+js2-vars.el
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/54/trunk/js2-vars.el
+END
+js2-util.el
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/50/trunk/js2-util.el
+END
+js2-build.el
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/27/trunk/js2-build.el
+END
+js2-indent.el
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/48/trunk/js2-indent.el
+END
+js2-browse.el
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/50/trunk/js2-browse.el
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/22/trunk/Makefile
+END
