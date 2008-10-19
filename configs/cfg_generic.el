@@ -8,3 +8,5 @@
 (setq-default indent-tabs-mode nil) ;; indent via spaces not tabs
 (setq frame-title-format '(buffer-file-name "%f" ("%b"))) ;; titlebar = buffer unless filename
 (show-paren-mode 1) ;; show paired parenthasis
+(set-default-font
+ "-apple-consolas-medium-r-normal--12-120-72-72-m-120-mac-roman")
