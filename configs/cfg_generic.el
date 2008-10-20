@@ -10,6 +10,7 @@
 (show-paren-mode 1) ;; show paired parenthasis
 (set-default-font
  "-apple-consolas-medium-r-normal--12-120-72-72-m-120-mac-roman")
+(toggle-debug-on-error t) ;; show traceback on error
 (tool-bar-mode -1) ;; hide the excess chrome
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
