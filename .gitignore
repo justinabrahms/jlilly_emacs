@@ -2,3 +2,6 @@
 *.elc
 packages/js2-mode/build/
 *~
+*#*
+games/
+*.cache
