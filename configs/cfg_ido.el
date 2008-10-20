@@ -16,6 +16,7 @@
         '(ido-only-match ((((class color)) (:foreground "Blue"))))
         '(ido-first-match ((t (:background "Blue" :foreground "white")))))
 
+;; function below will allow you to run ido to open a recently closed file
 (require 'recentf)
 (setq recentf-max-saved-items 100)
 (defun ido-choose-from-recentf ()
