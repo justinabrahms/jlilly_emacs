@@ -36,7 +36,7 @@
   (shell-command (concat py-python-command " -c \"from pydoc import help;help(\'" w "\')\"") "*PYDOCS*")
   (view-buffer-other-window "*PYDOCS*" t 'kill-buffer-and-window))
 
-(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-m C-f") 'py-doc-search)))
+(add-hook 'python-mode-hook (lambda () (local-set-key "\C-c\C-f" 'py-doc-search)))
 
 ;; flymake + pylint
 (when (load "flymake" t)
