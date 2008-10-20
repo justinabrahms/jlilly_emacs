@@ -1,5 +1,7 @@
 ;; ECB
 (require 'ecb)
+(ecb-activate)
+(ecb-toggle-ecb-windows)
 
 (define-key global-map  [f7]         'ecb-toggle-ecb-windows)
 
