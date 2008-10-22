@@ -1,5 +1,6 @@
 ;; ECB
 (require 'ecb)
+(setq ecb-tip-of-the-day nil)
 (ecb-activate)
 (ecb-toggle-ecb-windows)
 
@@ -10,3 +11,8 @@
  '(ecb-source-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face :background "DeepSkyBlue" :foreground "white"))))
  '(ecb-default-highlight-face ((((class color) (background dark)) (:background "DarkSlateBlue" :foreground "white"))))
  '(ecb-analyse-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face :background "DarkSlateBlue" :foreground "white")))))
+
+;; Excludes some files from ecb
+'(ecb-source-file-regexps (quote ((".*" 
+          ("\\(^\\(\\.\\|#\\)\\|\\(~$\\|\\.\\(pyc\\|elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)") 
+          ("^\\.\\(emacs\\|gnus\\)$")))))
