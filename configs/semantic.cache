@@ -2,7 +2,7 @@
 ;; SEMANTICDB Tags save file
 (semanticdb-project-database-file "configs/"
   :tables (list 
-    (semanticdb-table "cfg_cedet.el"
+   (semanticdb-table "cfg_cedet.el"
     :major-mode 'emacs-lisp-mode
     :tags 'nil
     :file "cfg_cedet.el"
@@ -14,8 +14,10 @@
     )
    (semanticdb-table "cfg_ecb.el"
     :major-mode 'emacs-lisp-mode
-    :tags 'nil
+    :tags '(("ecb" include nil nil [8 22]) ("setq" code nil nil [23 52]) ("ecb-activate" code nil nil [53 67]) ("ecb-toggle-ecb-windows" code nil nil [68 92]) ("define-key" code nil nil [94 155]) ("custom-set-faces" code nil nil [157 689]) ("ecb-source-file-regexps" code nil nil [724 921]))
     :file "cfg_ecb.el"
+    :pointmax 922
+    :unmatched-syntax 'nil
     )
    (semanticdb-table "cfg_linum.el"
     :major-mode 'emacs-lisp-mode
@@ -24,13 +26,9 @@
     )
    (semanticdb-table "cfg_keybindings.el"
     :major-mode 'emacs-lisp-mode
-    :tags 'nil
+    :tags '(("global-set-key" code nil nil [1 54]) ("global-set-key" code nil nil [55 104]) ("global-set-key" code nil nil [106 157]) ("global-set-key" code nil nil [159 214]) ("global-set-key" code nil nil [215 268]) ("global-set-key" code nil nil [303 356]))
     :file "cfg_keybindings.el"
-    )
-   (semanticdb-table "cfg_css_mode.el"
-    :major-mode 'emacs-lisp-mode
-    :tags 'nil
-    :file "cfg_css_mode.el"
+    :pointmax 366
     )
    (semanticdb-table "cfg_javascript.el"
     :major-mode 'emacs-lisp-mode
@@ -45,14 +43,41 @@
     )
    (semanticdb-table "cfg_browser.el"
     :major-mode 'emacs-lisp-mode
-    :tags 'nil
+    :tags '(("setq" code nil nil [52 195]))
     :file "cfg_browser.el"
+    :pointmax 195
     )
    (semanticdb-table "cfg_python.el"
     :major-mode 'emacs-lisp-mode
-    :tags '(("setq" code nil nil [45 113]) ("setq" code nil nil [114 191]) ("add-to-list" code nil nil [192 254]) ("setq" code nil nil [255 358]) ("python-mode" function (:prototype-flag t :user-visible-flag t) nil [359 421]) ("doctest-mode" function (:prototype-flag t :user-visible-flag t) nil [422 507]) ("pycomplete" include nil nil [508 529]) ("pymacs" include nil nil [547 564]) ("pymacs-load" code nil nil [565 597]) ("define-skeleton" code nil nil [608 714]) ("define-key" code nil nil [715 769]))
+    :tags '(("setq" code nil nil [41 109]) ("setq" code nil nil [110 187]) ("add-to-list" code nil nil [188 250]) ("setq" code nil nil [251 354]) ("python-mode" function (:prototype-flag t :user-visible-flag t) nil [355 417]) ("doctest-mode" function (:prototype-flag t :user-visible-flag t) nil [418 503]) ("pymacs" include nil nil [544 561]) ("pymacs-load" code nil nil [562 594]) ("define-skeleton" code nil nil [605 711]) ("define-key" code nil nil [712 766]) ("py-doc-search" function (:user-visible-flag t :arguments ("w")) nil [788 1456]) ("add-hook" code nil nil [1458 1540]) ("when" code nil nil [1562 2017]))
     :file "cfg_python.el"
-    :pointmax 769
+    :pointmax 2017
+    )
+   (semanticdb-table "cfg_mmmode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("mmm-mode" include nil nil [29 48]) ("setq" code nil nil [49 78]) ("mmm-sample" include nil nil [79 100]))
+    :file "cfg_mmmode.el"
+    :pointmax 100
+    )
+   (semanticdb-table "cfg_orgmode.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("setq" code nil nil [31 62]) ("setq" code nil nil [63 95]) ("setq" code nil nil [195 280]) ("setq" code nil nil [281 386]) ("setq" code nil nil [387 408]))
+    :file "cfg_orgmode.el"
+    :pointmax 454
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cfg_uniquify.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("uniquify" include nil nil [1 20]) ("setq" code nil nil [21 63]) ("setq" code nil nil [64 93]) ("setq" code nil nil [94 131]) ("setq" code nil nil [166 206]))
+    :file "cfg_uniquify.el"
+    :pointmax 241
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "cfg_generic.el"
+    :major-mode 'emacs-lisp-mode
+    :tags '(("setq" code nil nil [1 33]) ("prefer-coding-system" code nil nil [54 83]) ("setq" code nil nil [97 135]) ("setq" code nil nil [159 199]) ("global-font-lock-mode" code nil nil [224 249]) ("setq-default" code nil nil [273 309]) ("setq-default" code nil nil [343 378]) ("setq" code nil nil [409 466]) ("show-paren-mode" code nil nil [504 523]) ("set-default-font" code nil nil [551 634]) ("toggle-debug-on-error" code nil nil [635 660]) ("tool-bar-mode" code nil nil [688 706]) ("menu-bar-mode" code nil nil [733 751]) ("scroll-bar-mode" code nil nil [752 772]))
+    :file "cfg_generic.el"
+    :pointmax 772
     )
    )
   :file "semantic.cache"
