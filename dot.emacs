@@ -34,7 +34,6 @@
                   "cfg_ido"
                   "cfg_snippets"
                   "cfg_cedet"
-                  "cfg_ecb"
                   "cfg_git"
                   "cfg_orgmode"
                   "cfg_linum"
