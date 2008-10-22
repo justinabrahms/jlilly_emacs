@@ -1,7 +1,5 @@
 ;; TODO
 ;; code following
-;; interactive interpreter
-;; check into code snippets
 ;; code folding
 
 (setq load-path (cons "~/.emacs.d" load-path))
@@ -44,6 +42,7 @@
                   "cfg_css-mode"
                   "cfg_javascript"
                   "cfg_highlight_current_line"
+                  "cfg_uniquify"
                   "cfg_browser"))
 
 (custom-set-variables
