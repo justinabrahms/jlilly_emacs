@@ -14,9 +14,9 @@
     )
    (semanticdb-table "cfg_ecb.el"
     :major-mode 'emacs-lisp-mode
-    :tags '(("ecb" include nil nil [8 22]) ("setq" code nil nil [23 52]) ("ecb-activate" code nil nil [53 67]) ("ecb-toggle-ecb-windows" code nil nil [68 92]) ("define-key" code nil nil [94 155]) ("custom-set-faces" code nil nil [157 689]) ("ecb-source-file-regexps" code nil nil [724 921]))
+    :tags 'nil
     :file "cfg_ecb.el"
-    :pointmax 922
+    :pointmax 939
     :unmatched-syntax 'nil
     )
    (semanticdb-table "cfg_linum.el"
@@ -75,9 +75,10 @@
     )
    (semanticdb-table "cfg_generic.el"
     :major-mode 'emacs-lisp-mode
-    :tags '(("setq" code nil nil [1 33]) ("prefer-coding-system" code nil nil [54 83]) ("setq" code nil nil [97 135]) ("setq" code nil nil [159 199]) ("global-font-lock-mode" code nil nil [224 249]) ("setq-default" code nil nil [273 309]) ("setq-default" code nil nil [343 378]) ("setq" code nil nil [409 466]) ("show-paren-mode" code nil nil [504 523]) ("set-default-font" code nil nil [551 634]) ("toggle-debug-on-error" code nil nil [635 660]) ("tool-bar-mode" code nil nil [688 706]) ("menu-bar-mode" code nil nil [733 751]) ("scroll-bar-mode" code nil nil [752 772]))
+    :tags '(("prefer-coding-system" code nil nil [27 56]) ("setq" code nil nil [70 108]) ("setq" code nil nil [132 172]) ("global-font-lock-mode" code nil nil [197 222]) ("setq-default" code nil nil [245 280]) ("setq" code nil nil [311 368]) ("toggle-debug-on-error" code nil nil [406 431]) ("fset" code nil nil [459 488]) ("setq" code nil nil [559 593]) ("display-time" code nil nil [621 635]) ("setq" code nil nil [671 703]) ("tool-bar-mode" code nil nil [724 742]) ("menu-bar-mode" code nil nil [769 787]) ("scroll-bar-mode" code nil nil [788 808]) ("setq-default" code nil nil [809 845]) ("set-default-font" code nil nil [879 962]) ("show-paren-mode" code nil nil [963 982]))
     :file "cfg_generic.el"
-    :pointmax 772
+    :pointmax 1010
+    :unmatched-syntax 'nil
     )
    )
   :file "semantic.cache"
