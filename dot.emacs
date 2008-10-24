@@ -40,6 +40,7 @@
                   "cfg_keybindings"
                   "cfg_css-mode"
                   "cfg_javascript"
+                  "cfg_server"
                   "cfg_highlight_current_line"
                   "cfg_uniquify"
                   "cfg_browser"))
@@ -66,4 +67,5 @@
  '(flymake-warnline ((((class color)) (:underline "orange" :slant italic :weight bold))))
  '(highlight-current-line-face ((t (:background "black"))))
  '(ido-first-match ((t (:background "Blue" :foreground "white"))))
- '(ido-only-match ((((class color)) (:foreground "Blue")))))
+ '(ido-only-match ((((class color)) (:foreground "Blue"))))
+ '(yas/field-highlight-face ((t nil))))
