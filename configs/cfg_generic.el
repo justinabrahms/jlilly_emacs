@@ -1,5 +1,6 @@
 ;; ALTER DEFAULT BEHAVIOR
 (prefer-coding-system 'utf-8) ;; use UTF-8
+(setq backup-by-copying t) ;; fix for Transmitt to work
 (setq backup-by-copying-when-linked t) ;; preserve hard links
 (setq backup-by-copying-when-mismatch t) ;; preserve owner:group
 (global-font-lock-mode 1) ;; make pretty fonts?
@@ -19,3 +20,13 @@
 (set-default-font
  "-apple-consolas-medium-r-normal--12-120-72-72-m-120-mac-roman")
 (show-paren-mode 1) ;; show paired parenthasis
+
+
+;; full screen toggle using command+[RET]
+(defun toggle-fullscreen () 
+  (interactive) 
+    (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
+                                               nil 
+                                               'fullboth)))
+(global-set-key [(meta return)] 'toggle-fullscreen) 
+
