@@ -9,3 +9,4 @@
 (setq org-todo-keywords '("TODO" "WAITING" "IN PROGRESS" "DONE")
       org-todo-interpretation 'sequence)
 (setq org-log-done t) ;; timestamp when things are marked completed
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
