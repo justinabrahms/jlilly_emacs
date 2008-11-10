@@ -8,6 +8,13 @@
 (setq frame-title-format '(buffer-file-name "%f" ("%b"))) ;; titlebar = buffer unless filename
 (toggle-debug-on-error t) ;; show traceback on error
 (fset 'yes-or-no-p 'y-or-n-p) ;; allows you to type "y" instead of "yes" on exit
+(mouse-avoidance-mode 'cat-and-mouse) ;; mouse jumps away when typing under it
+(setq backup-directory-alist '(("." . "~/.emacs-backups"))) ;; stop leaving backup files laying about
+
+
+
+;; One of Apps
+(require 'rst) ;; require ReST mode
 
 ;; VISUAL DISPLAY
 (setq display-time-day-and-date t) ;; shows date in modeline 
@@ -30,3 +37,5 @@
                                                'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen) 
 
+;; MISC CRAP
+(defalias 'qrr 'query-replace-regexp)
