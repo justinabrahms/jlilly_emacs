@@ -5,8 +5,13 @@
 (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 (setq w3m-use-cookies t) ;; enable cookie use. Mmm. Cookies.
 
-(setq w3m-use-title-buffer-name t) ;; set the buffer name to website title
-
+;; set buffer name to title or url
+(add-hook 'w3m-display-hook
+          (lambda (url)
+            (rename-buffer
+             (format "*w3m: %s*" (or w3m-current-title
+                                     w3m-current-url)) t)))
 
 ;; optional keyboard short-cut
 (global-set-key "\C-xm" 'browse-url-at-point)
+
