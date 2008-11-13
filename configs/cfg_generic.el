@@ -9,12 +9,30 @@
 (toggle-debug-on-error t) ;; show traceback on error
 (fset 'yes-or-no-p 'y-or-n-p) ;; allows you to type "y" instead of "yes" on exit
 (mouse-avoidance-mode 'cat-and-mouse) ;; mouse jumps away when typing under it
-(setq backup-directory-alist '(("." . "~/.emacs-backups"))) ;; stop leaving backup files laying about
+(if (load "mwheel" t)
+    (mwheel-install)) ;; turn on the mouse wheel 
 
+
+;; stop leaving # files and ~ files strewn about. put them in a temp folder
+(defvar user-temporary-file-directory
+  (concat temporary-file-directory user-login-name "/"))
+(make-directory user-temporary-file-directory t)
+(setq backup-directory-alist
+      `(("." . ,user-temporary-file-directory)
+        (,tramp-file-name-regexp nil)))
+(setq auto-save-list-file-prefix
+      (concat user-temporary-file-directory ".auto-saves-"))
+(setq auto-save-file-name-transforms
+      `((".*" ,user-temporary-file-directory t)))
 
 
 ;; One of Apps
 (require 'rst) ;; require ReST mode
+;; DIRED
+(require 'dired-details) ;; hide useless permission info in dired
+(dired-details-install)
+(setq dired-details-hidden-string "")
+
 
 ;; VISUAL DISPLAY
 (setq display-time-day-and-date t) ;; shows date in modeline 
