@@ -1,4 +1,4 @@
-;; Color Theme
-(require 'color-theme)
+;; Color Theme 
+(require 'color-theme) 
 (color-theme-initialize)
-(color-theme-clarity)
+(color-theme-blippblopp)
