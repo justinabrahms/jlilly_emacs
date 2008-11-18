@@ -12,6 +12,9 @@
 (if (load "mwheel" t)
     (mwheel-install)) ;; turn on the mouse wheel 
 
+;; enable windmove if the package is available
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
 ;; stop leaving # files and ~ files strewn about. put them in a temp folder
 (defvar user-temporary-file-directory
