@@ -46,7 +46,7 @@
 (scroll-bar-mode -1)
 (setq-default transient-mark-mode t) ;; shows current selected region
 (set-default-font
- "-apple-consolas-medium-r-normal--12-120-72-72-m-120-mac-roman")
+ "-apple-andale mono-medium-r-normal--10-100-72-72-m-100-iso10646-1")
 (show-paren-mode 1) ;; show paired parenthasis
 
 

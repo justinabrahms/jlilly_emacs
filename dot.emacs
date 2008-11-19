@@ -30,6 +30,7 @@
                   "cfg_ido"
                   "cfg_snippets"
                   "cfg_git"
+                  "cfg_diredx"
                   "cfg_orgmode"
                   "cfg_slime"
                   "cfg_linum"
@@ -53,8 +54,7 @@
  '(ido-max-directory-size 90000)
  '(ido-max-work-directory-list 500)
  '(mark-holidays-in-calendar t)
- '(paren-sexp-mode t)
- '(rst-level-face-base-light 25))
+ '(paren-sexp-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
