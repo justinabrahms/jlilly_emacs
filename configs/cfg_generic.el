@@ -35,7 +35,7 @@
 (require 'dired-details) ;; hide useless permission info in dired
 (dired-details-install)
 (setq dired-details-hidden-string "")
-
+(require 'smooth-scrolling) ;; stop text from jumping on scroll.
 
 ;; VISUAL DISPLAY
 (setq display-time-day-and-date t) ;; shows date in modeline 
