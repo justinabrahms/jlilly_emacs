@@ -1,3 +1,6 @@
 [submodule "vendor/textmate"]
 	path = vendor/textmate
 	url = git://github.com/defunkt/textmate.el.git
+[submodule "vendor/magit"]
+	path = vendor/magit
+	url = http://git.gitorious.org/magit/mainline.git
