@@ -30,7 +30,7 @@
                   "cfg_ido"
                   "cfg_snippets"
                   "cfg_git"
-;                  "cfg_diredx"
+                  "cfg_diredx"
                   "cfg_orgmode"
                   "cfg_slime"
                   "cfg_linum"
