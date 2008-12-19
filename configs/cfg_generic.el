@@ -33,6 +33,7 @@
 (require 'rst) ;; require ReST mode
 (require 'textmate) ;; defunkt's textmate.el
 (textmate-mode)
+(require 'dpaste)
 ;; DIRED
 (require 'dired-details) ;; hide useless permission info in dired
 (dired-details-install)
