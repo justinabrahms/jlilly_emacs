@@ -47,6 +47,7 @@
                   "cfg_calendar"
                   "cfg_twitter"
                   "cfg_browser"
+                  "cfg_eshell"
                   "cfg_color-theme"))
 
 (custom-set-variables

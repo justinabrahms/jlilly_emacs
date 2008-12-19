@@ -1,3 +1,3 @@
 ;; Line numbering
 (require 'linum)
-(linum-mode 1)
+(linum-mode)
