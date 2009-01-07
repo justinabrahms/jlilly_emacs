@@ -71,6 +71,7 @@
  '(flymake-warnline ((((class color)) (:underline "orange" :slant italic :weight bold))))
  '(ido-first-match ((t (:background "Blue" :foreground "white"))))
  '(ido-only-match ((((class color)) (:foreground "Blue"))))
+ '(magit-diff-add ((((class color) (background dark)) (:foreground "green"))))
  '(mmm-init-submode-face ((t (:background "pink" :foreground "black"))))
  '(mouse ((t (:background "white" :foreground "black"))))
  '(twitter-time-stamp-face ((t (:slant italic))))
