@@ -1,5 +1,6 @@
 ;; ALTER DEFAULT BEHAVIOR
 (prefer-coding-system 'utf-8) ;; use UTF-8
+(setq user-temporary-file-directory "/tmp")
 (setq backup-by-copying t ;; fix for Transmitt to work
       backup-by-copying-when-linked t ;; preserve hard links
       backup-by-copying-when-mismatch t ;; preserve owner:group
@@ -56,6 +57,7 @@
 (require 'textmate) ;; defunkt's textmate.el
 (textmate-mode)
 (require 'dpaste)
+(require 'magit)
 (winner-mode t) ;; turn on saved buffer configs
 ;; DIRED
 (require 'dired-details) ;; hide useless permission info in dired
