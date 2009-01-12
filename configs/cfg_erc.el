@@ -3,7 +3,7 @@
 
 ;; auto join some channels
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs" "#nethack" "#django-social" "#michat")))
+      '(("freenode.net" "#emacs" "#django-social" "#michat")))
 
 ;; keep erc from eating ram by truncating chat logs
 (setq erc-max-buffer-size 20000)
