@@ -1,6 +1,6 @@
 (global-set-key [M-down] 'previous-multiframe-window)
 (global-set-key [M-up]   'next-multiframe-window)
-
+(global-set-key [C-return]  'toggle-fullscreen)
 (global-set-key [(control tab)] 'ido-switch-buffer)
 
 (global-set-key "\C-x\C-m" 'execute-extended-command) ;; provides an alternative to M-x
