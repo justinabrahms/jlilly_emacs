@@ -7,3 +7,6 @@
 [submodule "./vendor/magit"]
 	path = ./vendor/magit
 	url = http://git.gitorious.org/magit/mainline.git
+[submodule "vendor/themes/twilight"]
+	path = vendor/themes/twilight
+	url = git://github.com/crafterm/twilight-emacs.git
