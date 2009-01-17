@@ -10,3 +10,6 @@
 [submodule "vendor/themes/twilight"]
 	path = vendor/themes/twilight
 	url = git://github.com/crafterm/twilight-emacs.git
+[submodule "vendor/django-mode"]
+	path = vendor/django-mode
+	url = git@github.com:gregnewman/django-mode.git
