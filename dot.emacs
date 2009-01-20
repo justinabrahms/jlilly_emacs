@@ -33,6 +33,7 @@
                   "cfg_tramp"
                   "cfg_ido"
                   "cfg_snippets"
+                  "cfg_html"
                   "cfg_git"
                   "cfg_diredx"
                   "cfg_orgmode"
@@ -77,3 +78,5 @@
  '(twitter-time-stamp-face ((t (:slant italic))))
  '(twitter-user-name-face ((t (:weight bold))))
  '(yas/field-highlight-face ((t nil))))
+
+(put 'upcase-region 'disabled nil)

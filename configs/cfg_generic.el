@@ -58,6 +58,7 @@
 (textmate-mode)
 (require 'dpaste)
 (require 'magit)
+(require 'jira)
 (winner-mode t) ;; turn on saved buffer configs
 ;; DIRED
 (require 'dired-details) ;; hide useless permission info in dired
