@@ -10,17 +10,6 @@
 (autoload 'doctest-mode "doctest-mode" "Editing mode for Python Doctest examples." t)
 ;(require 'pycomplete)
 
-; pymacs & rope
-(require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
-
-; django
-(define-skeleton django-trans
-   	  "django translate template tag"
-   	  nil
-   	  "{% trans '" _ "' %}")
-(define-key global-map  "\C-xt"         'django-trans)
-
 ; python doc search
 (defun py-doc-search (w)
   "Launch PyDOC on the Word at Point"
