@@ -75,6 +75,7 @@
  '(magit-diff-add ((((class color) (background dark)) (:foreground "green"))))
  '(mmm-init-submode-face ((t (:background "pink" :foreground "black"))))
  '(mouse ((t (:background "white" :foreground "black"))))
+ '(rst-level-1-face ((t (:background "grey85" :foreground "black"))) t)
  '(twitter-time-stamp-face ((t (:slant italic))))
  '(twitter-user-name-face ((t (:weight bold))))
  '(yas/field-highlight-face ((t nil))))
