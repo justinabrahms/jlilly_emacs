@@ -2,30 +2,39 @@
 ;; code following
 ;; code folding
 
-(setq load-path (cons "~/.emacs.d" load-path))
-(setq load-path (cons "~/.emacs.d/configs" load-path))
+(setq load-path (cons "~/.emacs.d/" load-path))
+(setq load-path (cons "~/.emacs.d/configs/" load-path))
 (setq load-path (cons "~/.emacs.d/vendor/" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/mmm-mode" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/color-theme" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/tramp" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/python-mode" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/textmate" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/magit" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/django-html-mode" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/slime" load-path))
-(setq load-path (cons "~/.emacs.d/vendor/snippets" load-path))
-(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/site-lisp" load-path))
-(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/lisp" load-path))
-(setq load-path (cons "/usr/share/emacs/site-lisp/w3m" load-path))
+(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/site-lisp/" load-path))
+(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/lisp/" load-path))
+(setq load-path (cons "/usr/share/emacs/site-lisp/w3m/" load-path))
 
-(defconst emacs-config-dir "~/.emacs.d/configs/" "")
+(defconst emacs-config-dir "~/.emacs.d/configs/")
+(defconst emacs-vendor-dir "~/.emacs.d/vendor/")
+(defun get-subdirs (directory)
+  "Get a list of subdirectories under a given directory"
+  (apply 'nconc (mapcar (lambda (fa)
+                        (and 
+                         (eq (cadr fa) t)
+                         (not (equal (car fa) "."))
+                         (not (equal (car fa) ".."))
+                         (list (car fa))))
+                        (directory-files-and-attributes directory))))
+
+(defun add-vendors-to-loadpath ()
+  "add subdirs of your vendor directory to the load path"
+  (dolist (subdir (get-subdirs emacs-vendor-dir))
+    (setq load-path (cons (concat emacs-vendor-dir subdir) load-path))
+    (message "Added %s to load path" subdir)))
+
+(add-vendors-to-loadpath)
+
 
 (defun load-cfg-files (filelist)
   (dolist (file filelist)
     (load (expand-file-name
            (concat emacs-config-dir file)))
-    (message "Loaded config file: %s" file)
-    ))
+    (message "Loaded config file: %s" file)))
 
 (load-cfg-files '("cfg_generic"
                   "cfg_mmmode"
@@ -56,6 +65,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(egg-enable-tooltip t)
  '(erc-modules (quote (autojoin button completion fill irccontrols match menu netsplit noncommands readonly ring services stamp track)))
  '(ido-max-directory-size 90000)
  '(ido-max-work-directory-list 500)
