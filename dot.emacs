@@ -37,12 +37,12 @@
     (message "Loaded config file: %s" file)))
 
 (load-cfg-files '("cfg_generic"
-                  "cfg_mmmode"
                   "cfg_python"
                   "cfg_tramp"
                   "cfg_ido"
                   "cfg_snippets"
                   "cfg_html"
+;                  "cfg_nxhtml"
                   "cfg_git"
                   "cfg_diredx"
                   "cfg_orgmode"
@@ -70,12 +70,14 @@
  '(ido-max-directory-size 90000)
  '(ido-max-work-directory-list 500)
  '(mark-holidays-in-calendar t)
+ '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(blue ((t (:foreground "RGB6699ff"))))
  '(border ((t (:background "white" :foreground "black"))))
  '(cursor ((t (:background "yellow" :foreground "black"))))
  '(flymake-errline ((((class color)) (:background "Red" :weight bold))))
@@ -85,6 +87,7 @@
  '(magit-diff-add ((((class color) (background dark)) (:foreground "green"))))
  '(mmm-init-submode-face ((t (:background "pink" :foreground "black"))))
  '(mouse ((t (:background "white" :foreground "black"))))
+ '(paren-face-match-light ((((class color)) (:background "RGB333333"))))
  '(rst-level-1-face ((t (:background "grey85" :foreground "black"))) t)
  '(twitter-time-stamp-face ((t (:slant italic))))
  '(twitter-user-name-face ((t (:weight bold))))

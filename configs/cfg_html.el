@@ -1,1 +1,1 @@
-(add-to-list 'auto-mode-alist '("\\.jsp$" . html-mode))
+;(add-to-list 'auto-mode-alist '("\\.jsp$" . html-mode))
