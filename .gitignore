@@ -4,4 +4,4 @@ packages/js2-mode/build/
 *~
 *#*
 games/
-*.cache
+url/
