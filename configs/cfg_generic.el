@@ -31,7 +31,7 @@
           
 
 
-
+(setq-default truncate-lines t) ;; truncate lines, not wrap
 (setq-default indent-tabs-mode nil) ;; indent via spaces not tabs
 (global-font-lock-mode 1) ;; make pretty fonts?
 (toggle-debug-on-error t) ;; show traceback on error
