@@ -8,6 +8,11 @@
             interpreter-mode-alist))
 (autoload 'python-mode "python-mode" "Python editing mode." t)
 (autoload 'doctest-mode "doctest-mode" "Editing mode for Python Doctest examples." t)
+
+;; highlight all characters beyond col #80
+(add-to-list 'load-path "vendor/highlight-80+")
+(require 'highlight-80+)
+
 ;(require 'pycomplete)
 
 ; python doc search

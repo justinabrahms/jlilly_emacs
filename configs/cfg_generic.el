@@ -58,6 +58,7 @@
 (textmate-mode)
 (require 'dpaste)
 (require 'magit)
+;;(require 'egg) ;; will need to choose between this one and magit, I think.
 (require 'jira)
 (winner-mode t) ;; turn on saved buffer configs
 ;; DIRED
