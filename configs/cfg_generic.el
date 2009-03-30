@@ -26,12 +26,18 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (show-paren-mode 1) ;; show paired parenthasis
-(set-default-font
- "-apple-andale mono-medium-r-normal--12-100-72-72-m-100-iso10646-1")
-          
+
+(when (string= "mac" window-system)
+  ;; Mac-Specific Settings
+  (set-default-font
+   "-apple-andale mono-medium-r-normal--12-100-72-72-m-100-iso10646-1"))
+(when (string= "x" window-system)
+  ;; Linux-Specific Settings
+  (set-default-font
+   "-unknown-Inconsolata-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"))
 
 
-
+(setq-default truncate-lines t) ;; truncate lines, not wrap
 (setq-default indent-tabs-mode nil) ;; indent via spaces not tabs
 (global-font-lock-mode 1) ;; make pretty fonts?
 (toggle-debug-on-error t) ;; show traceback on error
@@ -58,7 +64,7 @@
 (textmate-mode)
 (require 'dpaste)
 (require 'magit)
-;;(require 'egg) ;; will need to choose between this one and magit, I think.
+(require 'egg) ;; will need to choose between this one and magit, I think.
 (require 'jira)
 (winner-mode t) ;; turn on saved buffer configs
 ;; DIRED
