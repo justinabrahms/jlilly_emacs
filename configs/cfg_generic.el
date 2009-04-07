@@ -34,8 +34,7 @@
 (when (string= "x" window-system)
   ;; Linux-Specific Settings
   (set-default-font
-   "-unknown-Inconsolata-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"))
-
+   "-unknown-DejaVu Sans Mono-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1"))
 
 (setq-default truncate-lines t) ;; truncate lines, not wrap
 (setq-default indent-tabs-mode nil) ;; indent via spaces not tabs
