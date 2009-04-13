@@ -12,7 +12,7 @@
       magit-auto-update t
       magit-collapse-threshold nil
 
-      auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
+      auto-save-list-file-prefix (concat user-temporary-file-directory "/.auto-saves-")
 
       auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
 
