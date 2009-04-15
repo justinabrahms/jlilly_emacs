@@ -16,3 +16,21 @@
 [submodule "vendor/egg"]
 	path = vendor/egg
 	url = git://github.com/bogolisk/egg.git
+[submodule "vendor/yasnippet-django"]
+	path = vendor/yasnippet-django
+	url = git@github.com:justinlilly/yasnippet-django.git
+[submodule "themes/github"]
+	path = themes/github
+	url = git://github.com/dudleyf/color-theme-github.git
+[submodule "themes/tango2"]
+	path = themes/tango2
+	url = git://github.com/wfarr/color-theme-tango-2.git
+[submodule "themes/irblack"]
+	path = themes/irblack
+	url = git://github.com/burke/color-theme-ir-black.git
+[submodule "themes/vibrant-ink"]
+	path = themes/vibrant-ink
+	url = git://github.com/mig/color-theme-vibrant-ink.git
+[submodule "themes/merbivore"]
+	path = themes/merbivore
+	url = git://github.com/mig/color-theme-merbivore.git
