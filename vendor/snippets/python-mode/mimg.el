@@ -1,1 +1,1 @@
-${1:attribute} = models.ImageField(upload_to='${2:/tmp}'$3)$0
+${1:attribute} = models.ImageField(upload_to='${2:/tmp}'${3})$0

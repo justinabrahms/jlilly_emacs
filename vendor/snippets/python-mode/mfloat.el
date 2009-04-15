@@ -1,1 +1,1 @@
-${1:attribute} = models.FloatField($2)$0
+${1:attribute} = models.FloatField(${2})$0

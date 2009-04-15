@@ -1,1 +1,1 @@
-${1:attribute} = models.ForeignKey($2)$0
+${1:attribute} = models.ForeignKey(${2})$0
