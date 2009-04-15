@@ -1,6 +1,6 @@
 ;; ALTER DEFAULT BEHAVIOR
 (prefer-coding-system 'utf-8) ;; use UTF-8
-(setq user-temporary-file-directory "/tmp")
+(setq user-temporary-file-directory "/tmp/")
 (setq backup-by-copying t ;; fix for Transmitt to work
       backup-by-copying-when-linked t ;; preserve hard links
       backup-by-copying-when-mismatch t ;; preserve owner:group
@@ -12,7 +12,7 @@
       magit-auto-update t
       magit-collapse-threshold nil
 
-      auto-save-list-file-prefix (concat user-temporary-file-directory "/.auto-saves-")
+      auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
 
       auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
 
