@@ -34,3 +34,15 @@
 [submodule "themes/merbivore"]
 	path = themes/merbivore
 	url = git://github.com/mig/color-theme-merbivore.git
+[submodule "vendor/smex"]
+	path = vendor/smex
+	url = git://github.com/nonsequitur/smex.git
+[submodule "vendor/grep-o-matic"]
+	path = vendor/grep-o-matic
+	url = git://github.com/ZungBang/emacs-grep-o-matic.git
+[submodule "vendor/far-search"]
+	path = vendor/far-search
+	url = git://github.com/aemoncannon/far-search-mode.git
+[submodule "vendor/confluence"]
+	path = vendor/confluence
+	url = git://github.com/dpiddy/confluence-el.git
