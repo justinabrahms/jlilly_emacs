@@ -3,8 +3,14 @@
 (global-set-key [C-return]  'toggle-fullscreen)
 (global-set-key [(control tab)] 'ido-switch-buffer)
 
-(global-set-key "\C-x\C-m" 'execute-extended-command) ;; provides an alternative to M-x
-(global-set-key "\C-c\C-m" 'execute-extended-command) ;; ditto
+(global-set-key "\C-x\C-m" 'smex) ;; provides an alternative to M-x
+(global-set-key "\C-c\C-m" 'smex-major-mode-commands) ;; for the other binding
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c M-x") 'smex-update-and-run)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 
 (global-set-key "\C-w" 'backward-kill-word) ;; delete an entire word
 (global-set-key "\C-x\C-k" 'kill-region) ;; alternative for old C-w

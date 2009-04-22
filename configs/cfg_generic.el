@@ -71,6 +71,7 @@
 (dired-details-install)
 (setq dired-details-hidden-string "")
 (require 'smooth-scrolling) ;; stop text from jumping on scroll.
+(require 'smex)
 
 ;; VISUAL DISPLAY
 (display-time) ;; shows datetime in the mode line
