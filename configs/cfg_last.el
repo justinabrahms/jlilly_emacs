@@ -1,0 +1,1 @@
+(smex-initialize)

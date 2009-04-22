@@ -57,7 +57,8 @@
                   "cfg_calendar"
                   "cfg_twitter"
                   "cfg_eshell"
-                  "cfg_color-theme"))
+                  "cfg_color-theme"
+                  "cfg_last"))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
