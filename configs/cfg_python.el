@@ -7,8 +7,14 @@
           '(lambda () (eldoc-mode 1)) t)
 (add-hook 'python-mode-hook
           '(lambda () (highlight-80+-mode 1)) t)
+
 (add-hook 'python-mode-hook
-          '(lambda () (flymake-mode 1)) t)
+          (lambda ()
+            (define-key python-mode-map "\"" 'electric-pair)
+            (define-key python-mode-map "\'" 'electric-pair)
+            (define-key python-mode-map "(" 'electric-pair)
+            (define-key python-mode-map "[" 'electric-pair)
+            (define-key python-mode-map "{" 'electric-pair)))
 
 ; python doc search
 (defun py-doc-search (w)
