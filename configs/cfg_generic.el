@@ -1,31 +1,94 @@
 ;; ALTER DEFAULT BEHAVIOR
 (prefer-coding-system 'utf-8) ;; use UTF-8
 (setq user-temporary-file-directory "/tmp/")
-(setq backup-by-copying t ;; fix for Transmitt to work
-      backup-by-copying-when-linked t ;; preserve hard links
-      backup-by-copying-when-mismatch t ;; preserve owner:group
-      frame-title-format '(buffer-file-name "%f" ("%b")) ;; titlebar = buffer unless filename
-      transient-mark-mode t
-      save-place t
-      indicate-empty-lines t
-      color-theme-is-global t
-      magit-auto-update t
-      magit-collapse-threshold nil
+(setq
+ backup-by-copying t ;; fix for Transmitt to work
+ backup-by-copying-when-linked t ;; preserve hard links
+ backup-by-copying-when-mismatch t ;; preserve owner:group
+ frame-title-format '(buffer-file-name "%f" ("%b")) ;; titlebar = buffer unless filename
+ transient-mark-mode t
+ save-place t
+ indicate-empty-lines t
+ color-theme-is-global t
+ magit-auto-update t
+ magit-collapse-threshold nil
 
-      auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
+ auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
 
-      auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
+ auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
 
-      display-time-day-and-date t ;; shows date in modeline
-      inhibit-startup-message t ;; no splash screen
+ display-time-day-and-date t ;; shows date in modeline
+ inhibit-startup-message t ;; no splash screen
+ show-trailing-whitespace t ;; show when there is excess space
+ user-mail-address "justinlilly@gmail.com"
+ version-control t ;; user numbers for backups
+ delete-old-versions t ;; silently delete extra backup versions
+
+ ido-default-file-method 'selected-window
+ ido-default-buffer-method ' selected-window
+ ido-save-directory-list-file "~/.emacs.d/ido.last"
+ ido-use-filename-at-point t
+ ido-use-url-at-point t
+ save-place t
 )
 
 
 
-(tool-bar-mode -1) ;; hide the excess chrome
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
-(show-paren-mode 1) ;; show paired parenthasis
+(when (featurep 'x) ;; when its gui..
+  (tool-bar-mode -1) ;; hide the excess chrome
+  (scroll-bar-mode -1)) ;; and turn of scrollbars
+(show-paren-mode +1) ;; show paired parenthasis
+(delete-selection-mode +1) ;; delete words if they are selected and you start typing
+(auto-compression-mode +1) ;; auto compress/decompress files
+(line-number-mode +1)
+(icomplete-mode +1) ;; incremental minibuffer completion
+(when (fboundp 'shell-command-completion-mode)
+  (shell-command-completion-mode +1))
+(when (fboundp 'savehist-mode)
+  (savehist-mode +1))
+(if (not (fboundp 'ido-mode))
+    (iswitchb-mode +1)                  ; fall back on iswitchb
+  (ido-mode +1)
+  (when (fboundp 'ido-everywhere)       ; not in emacs-goodies-el's ido
+    (ido-everywhere +1)))
+(mapc (lambda (x)
+        (add-hook x 'turn-on-eldoc-mode))
+      ;; A major mode supports eldoc iff it defines
+      ;; `eldoc-documentation-function'.
+      '(emacs-lisp-mode-hook ielm-mode-hook))
+(when (fboundp 'paredit-mode)
+  (mapc (lambda (x)
+          (add-hook x 'enable-paredit-mode))
+        '(emacs-lisp-mode-hook ielm-mode-hook
+          lisp-mode-hook inferior-lisp-mode-hook
+          slime-repl-mode-hook
+          scheme-mode-hook inferior-scheme-mode-hook
+          haskell-mode-hook literate-haskell-mode-hook inferior-haskell-mode-hook
+          python-mode-hook inferior-python-mode-hook)))
+(when (fboundp 'slime-mode)
+  (add-hook 'lisp-mode-hook 'slime-mode))
+(mapc (lambda (major-mode) ; Similar to http://emacswiki.org/wiki/PrettyLambda
+        (font-lock-add-keywords major-mode
+          `(("(\\(lambda\\)\\>"
+             (0 (prog1 ()
+                  (compose-region (match-beginning 1)
+                                  (match-end 1)
+                                  ,(make-char 'greek-iso8859-7 107))))))))
+      '(emacs-lisp-mode
+        inferior-emacs-lisp-mode
+        lisp-mode
+        slime-repl-mode
+        inferior-lisp-mode
+        scheme-mode
+        scheme48-mode
+        inferior-scheme-mode))
+(when (fboundp 'ibuffer)
+  (global-set-key (kbd "C-x C-b") 'ibuffer))
+(when (fboundp 'org-mode)
+  (add-to-list 'auto-mode-alist '("/TODO\\'" . org-mode)))
+
+
 
 (when (string= "mac" window-system)
   ;; Mac-Specific Settings
@@ -43,7 +106,7 @@
 (fset 'yes-or-no-p 'y-or-n-p) ;; allows you to type "y" instead of "yes" on exit
 (mouse-avoidance-mode 'cat-and-mouse) ;; mouse jumps away when typing under it
 (if (load "mwheel" t)
-    (mwheel-install)) ;; turn on the mouse wheel 
+    (mwheel-install)) ;; turn on the mouse wheel
 
 ;; enable windmove if the package is available
 (when (fboundp 'windmove-default-keybindings)
@@ -78,12 +141,12 @@
 
 
 ;; full screen toggle using command+[RET]
-(defun toggle-fullscreen () 
-  (interactive) 
-    (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) 
-                                               nil 
+(defun toggle-fullscreen ()
+  (interactive)
+    (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+                                               nil
                                                'fullboth)))
-(global-set-key [(meta return)] 'toggle-fullscreen) 
+(global-set-key [(meta return)] 'toggle-fullscreen)
 
 ;; MISC CRAP
 (defalias 'qrr 'query-replace-regexp)
