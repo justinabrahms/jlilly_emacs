@@ -1,19 +1,14 @@
 ;;; python-mode site-lisp configuration
-(setq load-path (cons "/Users/jlilly/.elisp/python-mode" load-path))
-(setq auto-mode-alist
-      (cons '("\\.py$" . python-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.doctest$" . doctest-mode))
-(setq interpreter-mode-alist
-      (cons '("python" . python-mode)
-            interpreter-mode-alist))
-(autoload 'python-mode "python-mode" "Python editing mode." t)
-(autoload 'doctest-mode "doctest-mode" "Editing mode for Python Doctest examples." t)
 
 ;; highlight all characters beyond col #80
-(add-to-list 'load-path "vendor/highlight-80+")
 (require 'highlight-80+)
 
-;(require 'pycomplete)
+(add-hook 'python-mode-hook
+          '(lambda () (eldoc-mode 1)) t)
+(add-hook 'python-mode-hook
+          '(lambda () (highlight-80+-mode 1)) t)
+(add-hook 'python-mode-hook
+          '(lambda () (flymake-mode 1)) t)
 
 ; python doc search
 (defun py-doc-search (w)
