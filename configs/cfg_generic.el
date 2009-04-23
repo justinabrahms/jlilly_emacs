@@ -13,6 +13,8 @@
  magit-auto-update t
  magit-collapse-threshold nil
 
+ set-mark-command-repeat-pop t ; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
+
  auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
 
  auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
@@ -42,6 +44,7 @@
 (delete-selection-mode +1) ;; delete words if they are selected and you start typing
 (auto-compression-mode +1) ;; auto compress/decompress files
 (line-number-mode +1)
+(auto-fill-mode +1)
 (icomplete-mode +1) ;; incremental minibuffer completion
 (when (fboundp 'shell-command-completion-mode)
   (shell-command-completion-mode +1))
@@ -116,6 +119,7 @@
 (defvar user-temporary-file-directory
   (concat temporary-file-directory user-login-name "/"))
 (make-directory user-temporary-file-directory t)
+(defconst use-backup-dir t)
 (setq backup-directory-alist
       `(("." . ,user-temporary-file-directory)
         (,tramp-file-name-regexp nil)))
@@ -135,6 +139,9 @@
 (setq dired-details-hidden-string "")
 (require 'smooth-scrolling) ;; stop text from jumping on scroll.
 (require 'smex)
+(require 'column-marker)
+(require 'gist)
+(require 'lorem-ipsum)
 
 ;; VISUAL DISPLAY
 (display-time) ;; shows datetime in the mode line
@@ -147,6 +154,54 @@
                                                nil
                                                'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen)
+
+;; Increase/Decrease font size on the fly
+;; Taken from: http://is.gd/iaAo
+(defun ryan/increase-font-size ()
+  (interactive)
+  (set-face-attribute 'default
+                      nil
+                      :height
+                      (ceiling (* 1.10
+                                  (face-attribute 'default :height)))))
+(defun ryan/decrease-font-size ()
+  (interactive)
+  (set-face-attribute 'default
+                      nil
+                      :height
+                      (floor (* 0.9
+                                  (face-attribute 'default :height)))))
+(global-set-key (kbd "C-+") 'ryan/increase-font-size)
+(global-set-key (kbd "C--") 'ryan/decrease-font-size)
+
+;; Functions for configuring window geometry and placement
+(defun smart-split ()
+  "Split the frame into 80-column sub-windows, and make sure no window has
+   fewer than 80 columns."
+  ; From http://hjiang.net/archives/253
+  (interactive)
+  (defun smart-split-helper (w)
+    "Helper function to split a given window into two, the first of which has 
+     80 columns."
+    (if (> (window-width w) (* 2 81))
+    (let ((w2 (split-window w 82 t)))
+      (smart-split-helper w2))))
+  (smart-split-helper nil))
+
+;Reload .emacs on the fly
+(defun reload-dot-emacs()
+  (interactive)
+  (if(bufferp (get-file-buffer ".emacs"))
+      (save-buffer(get-buffer ".emacs")))
+  (load-file "~/.emacs")
+  (message ".emacs reloaded successfully"))
+
+; simple electric pair 
+(defun electric-pair ()
+  "If at end of line, insert character pair without surrounding spaces.
+    Otherwise, just insert the typed character."
+  (interactive)
+  (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
 
 ;; MISC CRAP
 (defalias 'qrr 'query-replace-regexp)

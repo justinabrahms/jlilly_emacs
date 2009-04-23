@@ -59,6 +59,7 @@
                   "cfg_eshell"
                   "cfg_color-theme"
                   "cfg_autocomplete"
+                  "cfg_lisp"
                   "cfg_last"))
 
 (custom-set-variables
