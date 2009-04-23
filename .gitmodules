@@ -46,3 +46,6 @@
 [submodule "vendor/confluence"]
 	path = vendor/confluence
 	url = git://github.com/dpiddy/confluence-el.git
+[submodule "vendor/gist"]
+	path = vendor/gist
+	url = git://github.com/defunkt/gist.el.git
