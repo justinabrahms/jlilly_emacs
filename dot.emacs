@@ -14,7 +14,7 @@
 (defun get-subdirs (directory)
   "Get a list of subdirectories under a given directory"
   (apply 'nconc (mapcar (lambda (fa)
-                        (and 
+                        (and
                          (eq (cadr fa) t)
                          (not (equal (car fa) "."))
                          (not (equal (car fa) ".."))
@@ -58,6 +58,7 @@
                   "cfg_twitter"
                   "cfg_eshell"
                   "cfg_color-theme"
+                  "cfg_autocomplete"
                   "cfg_last"))
 
 (custom-set-variables
