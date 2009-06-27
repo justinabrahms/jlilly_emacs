@@ -196,12 +196,5 @@
   (load-file "~/.emacs")
   (message ".emacs reloaded successfully"))
 
-; simple electric pair 
-(defun electric-pair ()
-  "If at end of line, insert character pair without surrounding spaces.
-    Otherwise, just insert the typed character."
-  (interactive)
-  (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
-
 ;; MISC CRAP
 (defalias 'qrr 'query-replace-regexp)
