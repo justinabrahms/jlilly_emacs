@@ -7,6 +7,7 @@
 (global-set-key "\C-c\C-m" 'smex-major-mode-commands) ;; for the other binding
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c M-x") 'smex-update-and-run)
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
