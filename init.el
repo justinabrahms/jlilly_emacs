@@ -5,8 +5,6 @@
 (setq load-path (cons "~/.emacs.d/" load-path))
 (setq load-path (cons "~/.emacs.d/configs/" load-path))
 (setq load-path (cons "~/.emacs.d/vendor/" load-path))
-(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/site-lisp/" load-path))
-(setq load-path (cons "/Applications/Emacs.app/Contents/Resources/lisp/" load-path))
 (setq load-path (cons "/usr/share/emacs/site-lisp/w3m/" load-path))
 
 (defconst emacs-config-dir "~/.emacs.d/configs/")
@@ -36,31 +34,31 @@
            (concat emacs-config-dir file)))
     (message "Loaded config file: %s" file)))
 
-(load-cfg-files '("cfg_generic"
-                  "cfg_python"
-                  "cfg_tramp"
-                  "cfg_ido"
-                  "cfg_snippets"
-                  "cfg_html"
-;                  "cfg_nxhtml"
-                  "cfg_git"
-                  "cfg_diredx"
-                  "cfg_orgmode"
-                  "cfg_slime"
-                  "cfg_linum"
-                  "cfg_keybindings"
-                  "cfg_erc"
-                  "cfg_css-mode"
-                  "cfg_javascript"
-                  "cfg_server"
-                  "cfg_uniquify"
-                  "cfg_calendar"
-                  "cfg_twitter"
-                  "cfg_eshell"
-                  "cfg_color-theme"
-                  "cfg_autocomplete"
-                  "cfg_lisp"
-                  "cfg_last"))
+ (load-cfg-files '("cfg_generic"
+                   "cfg_python"
+                   "cfg_tramp"
+                   "cfg_ido"
+                   "cfg_snippets"
+                   "cfg_html"
+                  ;; "cfg_nxhtml"
+                   "cfg_git"
+                   "cfg_diredx"
+                   "cfg_orgmode"
+                   "cfg_slime"
+                   "cfg_linum"
+                   "cfg_keybindings"
+                   "cfg_erc"
+                   "cfg_css-mode"
+                   "cfg_javascript"
+                   "cfg_server"
+                   "cfg_uniquify"
+                   "cfg_calendar"
+                   "cfg_twitter"
+                   "cfg_eshell"
+                   "cfg_color-theme"
+                   "cfg_autocomplete"
+                   "cfg_lisp"
+                   "cfg_last"))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.

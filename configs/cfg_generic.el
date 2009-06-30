@@ -193,7 +193,7 @@
   (interactive)
   (if(bufferp (get-file-buffer ".emacs"))
       (save-buffer(get-buffer ".emacs")))
-  (load-file "~/.emacs")
+  (load-file "~/.emacs.d/init.el")
   (message ".emacs reloaded successfully"))
 
 ;; MISC CRAP
