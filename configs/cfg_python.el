@@ -1,4 +1,5 @@
 ;;; python-mode site-lisp configuration
+(require 'python-mode)
 
 ;; highlight all characters beyond col #80
 (require 'highlight-80+)
