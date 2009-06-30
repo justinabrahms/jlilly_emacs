@@ -142,6 +142,7 @@
 (require 'column-marker)
 (require 'gist)
 (require 'lorem-ipsum)
+(require 'dired-single)
 
 ;; VISUAL DISPLAY
 (display-time) ;; shows datetime in the mode line
