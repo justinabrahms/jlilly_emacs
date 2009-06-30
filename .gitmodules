@@ -49,3 +49,6 @@
 [submodule "vendor/gist"]
 	path = vendor/gist
 	url = git://github.com/defunkt/gist.el.git
+[submodule "themes/brookstream"]
+	path = themes/brookstream
+	url = git://github.com/justinlilly/brookstream-emacs.git
