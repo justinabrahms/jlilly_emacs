@@ -52,3 +52,6 @@
 [submodule "themes/brookstream"]
 	path = themes/brookstream
 	url = git://github.com/justinlilly/brookstream-emacs.git
+[submodule "vendor/ectags"]
+	path = vendor/ectags
+	url = git://repo.or.cz/ectags.git
