@@ -89,6 +89,7 @@
  '(mouse ((t (:background "white" :foreground "black"))))
  '(paren-face-match-light ((((class color)) (:background "RGB333333"))))
  '(rst-level-1-face ((t (:background "grey85" :foreground "black"))) t)
+ '(rst-level-2-face ((t (:background "grey78" :foreground "black"))) t)
  '(twitter-time-stamp-face ((t (:slant italic))))
  '(twitter-user-name-face ((t (:weight bold))))
  '(yas/field-highlight-face ((t nil))))
