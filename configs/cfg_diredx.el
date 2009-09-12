@@ -1,3 +1,10 @@
+;; DIRED
+(require 'dired-details) ;; hide useless permission info in dired
+(dired-details-install)
+(setq dired-details-hidden-string "")
+
+(require 'dired-single)
+
 (require 'dired-x) 
 (setq dired-omit-files 
       (rx (or (seq bol (? ".") "#")         ;; emacs autosave files 
@@ -33,11 +40,11 @@
   ;; it's not loaded yet, so add our bindings to the load-hook
   (add-hook 'dired-load-hook 'my-dired-init))
 
-(global-set-key [(f5)] 'dired-single-magic-buffer)
-(global-set-key [(control f5)] (function
+(global-set-key [(f3)] 'dired-single-magic-buffer)
+(global-set-key [(control f3)] (function
 	(lambda nil (interactive)
         (dired-single-magic-buffer default-directory))))
-(global-set-key [(shift f5)] (function
+(global-set-key [(shift f3)] (function
         (lambda nil (interactive)
         (message "Current directory is: %s" default-directory))))
-(global-set-key [(meta f5)] 'dired-single-toggle-buffer-name)
+(global-set-key [(meta f3)] 'dired-single-toggle-buffer-name)
