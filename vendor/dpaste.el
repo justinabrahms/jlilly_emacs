@@ -59,8 +59,7 @@
   (let* ((file (or (buffer-file-name) (buffer-name)))
          (name (file-name-nondirectory file))
          (ext (or (cdr (assoc major-mode dpaste-supported-modes-alist))
-                  (file-name-extension file)
-                  "txt"))
+                  ""))
          (output (generate-new-buffer " *dpaste*")))
     (shell-command-on-region
      begin end
