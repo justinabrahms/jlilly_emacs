@@ -34,13 +34,14 @@
            (concat emacs-config-dir file)))
     (message "Loaded config file: %s" file)))
 
- (load-cfg-files '("cfg_generic"
+(load-cfg-files '("cfg_generic"
                    "cfg_python"
                    "cfg_tramp"
                    "cfg_ido"
                    "cfg_snippets"
                    "cfg_html"
                   ;; "cfg_nxhtml"
+                   "cfg_lorem"
                    "cfg_git"
                    "cfg_diredx"
                    "cfg_orgmode"
@@ -70,6 +71,8 @@
  '(ido-max-directory-size 90000)
  '(ido-max-work-directory-list 500)
  '(mark-holidays-in-calendar t)
+ '(org-agenda-files nil)
+ '(highlight-current-line-globally t nil (highlight-current-line))
  '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t))
 (custom-set-faces
@@ -92,7 +95,8 @@
  '(rst-level-2-face ((t (:background "grey78" :foreground "black"))) t)
  '(twitter-time-stamp-face ((t (:slant italic))))
  '(twitter-user-name-face ((t (:weight bold))))
- '(yas/field-highlight-face ((t nil))))
-
+ '(yas/field-highlight-face ((t nil)))
+ '(highlight-current-line-face ((t (:background "#333333"))))
+ )
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
