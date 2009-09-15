@@ -55,3 +55,9 @@
 [submodule "vendor/ectags"]
 	path = vendor/ectags
 	url = git://repo.or.cz/ectags.git
+[submodule "vendor/org-mode"]
+	path = vendor/org-mode
+	url = git://repo.or.cz/org-mode.git
+[submodule "vendor/dpaste-el"]
+	path = vendor/dpaste-el
+	url = git://github.com/gregnewman/dpaste.el.git
