@@ -72,7 +72,6 @@
  '(highlight-current-line-globally t nil (highlight-current-line))
  '(ido-max-directory-size 90000)
  '(ido-max-work-directory-list 500)
- '(org-agenda-files nil)
  '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t)
  '(quack-default-program "mzscheme")
