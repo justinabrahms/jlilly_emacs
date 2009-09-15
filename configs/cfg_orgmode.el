@@ -14,8 +14,18 @@
       '(("google"  . "http://www.google.com/search?q=")))
 (setq org-todo-keywords '("TODO" "WAITING" "IN PROGRESS" "DONE")
       org-todo-interpretation 'sequence)
-(setq org-log-done t) ;; timestamp when things are marked completed
+(setq org-log-done 'note) ;; timestamp when things are marked completed
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+(setq org-clock-persist t)
+(org-clock-persistence-insinuate)
+
+
+;; set up remember to use org mode
+(org-remember-insinuate)
+(setq org-directory "~/private/")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cr" 'org-remember)
 
 ;; This stuff seems useful, but is a bit over my head for the moment.
 ;;
@@ -161,10 +171,11 @@
 ;;        :tend ,(format-time-string "%Y-%m-%d" (calendar-time-from-absolute (+ org-starting-day 2) 0))))))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
+
 (setq org-agenda-custom-commands
       '(("c" "My custom agenda"
 	 ((org-agenda-list nil nil 1)
-          (sacha/org-agenda-load)
+;          (sacha/org-agenda-load)
 	  (tags "PROJECT-WAITING")
 	  (tags-todo "WAITING")
 	  (tags-todo "-MAYBE")))))
