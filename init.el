@@ -42,6 +42,7 @@
                    "cfg_html"
                   ;; "cfg_nxhtml"
                    "cfg_lorem"
+                   "cfg_scheme"
                    "cfg_git"
                    "cfg_diredx"
                    "cfg_orgmode"
