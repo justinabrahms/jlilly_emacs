@@ -258,7 +258,7 @@
     (py-execute-buffer)))
 (global-set-key (kbd "C-c C-e") 'rgr/python-execute)
 
-(setq ipython-command "/usr/local/bin/ipython")
+(setq ipython-command "/usr/bin/ipython")
 (require 'ipython)
 
 
