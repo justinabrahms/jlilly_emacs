@@ -1,8 +1,8 @@
 ;;; viper-tut.el --- Viper tutorial
 ;;
 ;; Author: Lennart Borgman
-;; Created: Fri Sep 08 16:55:42 2006
-;; Version: 0.1
+;; Created: Fri Sep 08 2006
+(defconst viper-tut:version "0.2") ;;Version: 0.2
 ;; Last-Updated:
 ;; Keywords:
 ;; Compatibility: Emacs 22
@@ -308,7 +308,7 @@
     (viper-info-on-file [?\C-c ?\C-g])
     ;; ^L	Refresh screen
     ;;(recenter [(control ?l)])
-    (recenter [?\C-l])
+    (recenter-top-bottom [?\C-l])
 
     ;; !}fmt	Format the paragraph, joining and filling lines to
     ;; !}sort	Sort lines of a paragraph alphabetically
@@ -471,7 +471,10 @@ tutorial buffer."
           viper-tut--parts)
     tut-file))
 
-(defvar viper-is-on nil)
+(defun viper-tut-viper-is-on ()
+  ;;(message "viper-tut-viper-is-on, vms=%s, cb=%s" (boundp 'viper-mode-string) (current-buffer))
+  ;;(boundp 'viper-mode-string)
+  (boundp 'viper-current-state))
 
 (defun viper-tut--display-changes (changed-keys part)
   "Display changes to some default Viper key bindings.
@@ -482,15 +485,14 @@ tutorial buffer with some explanatory links.
 CHANGED-KEYS should be a list in the format returned by
 `tutorial--find-changed-keys'."
   (when (or changed-keys
-            (not viper-is-on))
+            (viper-tut-viper-is-on))
     ;; Need the custom button face for viper buttons:
     ;;(when (and (boundp 'viper-mode) viper-mode) (require 'cus-edit))
     (goto-char tutorial--point-before-chkeys)
     (let* ((start (point))
            end
-           (viper-is-on (boundp 'viper-mode-string))
            (head
-            (if viper-is-on
+            (if (viper-tut-viper-is-on)
                 (if (= part viper-tut--emacs-part)
                     "
  NOTICE: This part of the Viper tutorial runs the Emacs tutorial.
@@ -513,7 +515,7 @@ CHANGED-KEYS should be a list in the format returned by
   NOTICE: You have currently not turned on Viper. Nothing in this
   tutorial \(the Viper Tutorial\) will work unless you do that. ["
               ))
-           (head2 (if viper-is-on
+           (head2 (if (viper-tut-viper-is-on)
                       (get-lang-string tutorial--lang 'tut-chgdhead2)
                     "More information")))
       (when (and head head2)
@@ -524,7 +526,7 @@ CHANGED-KEYS should be a list in the format returned by
                        ;;'tutorial-arg arg
                        'part part
                        'action
-                       (if viper-is-on
+                       (if (viper-tut-viper-is-on)
                            'viper-tut--detailed-help
                          'go-home-blaha)
                        'follow-link t
@@ -584,7 +586,7 @@ CHANGED-KEYS should be a list in the format returned by
                           ;;(concat "** The key " key-desc " has been rebound, but you can use " where " instead ["))
                           (when (and s s2)
                             (setq s (format s key-desc where s2))
-                            (insert s)
+                            (insert s " [")
                             (insert-button s2
                                            'tutorial-buffer
                                            (current-buffer)
@@ -688,8 +690,7 @@ later."
                              (= part old-tut-part)
                              (not (buffer-modified-p old-tut-buf)))))
            old-tut-file
-           (old-tut-point 1)
-           viper-is-on)
+           (old-tut-point 1))
       (unless (file-exists-p filename) (error "Can't fine %s" filename))
       (setq tutorial--point-after-chkeys (point-min))
       ;; Try to display the tutorial buffer before asking to revert it.
@@ -718,7 +719,6 @@ later."
       (unless old-tut-is-ok
         (switch-to-buffer (get-buffer-create tut-buf-name))
         (unless old-tut-buf (text-mode))
-        (setq viper-is-on (boundp 'viper-mode-string))
         (setq viper-tut--part part)
         (setq old-tut-file (file-exists-p (viper-tut--saved-file)))
         (when (= part 0) (setq old-tut-file nil)) ;; You do not edit in the intro
@@ -764,7 +764,8 @@ later."
           (save-excursion
             (goto-char (point-min))
             (while (re-search-forward "'\\([][+a-zA-Z~<>!;,:.'\"%/?(){}$^0|-]\\)'" nil t)
-              (let ((matched-char (match-string 1)))
+              (let ((matched-char (match-string 1))
+                    (inhibit-read-only t))
                 (put-text-property 0 1 'vi-char t matched-char)
                 (put-text-property 0 1 'face '(:foreground "blue") matched-char)
                 (replace-match matched-char))))

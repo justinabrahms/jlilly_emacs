@@ -3,14 +3,14 @@
 ;; Author: Lennart Borgman (lennart O borgman A gmail O com)
 ;; Created: Mon Jun 25 19:02:49 2007
 (defconst as-external:version "0.6") ;;Version:
-;; Last-Updated: 2008-09-30T11:44:43+0200 Tue
+;; Last-Updated: 2009-08-04 Tue
 ;; URL:
 ;; Keywords:
 ;; Compatibility:
 ;;
 ;; Features that might be required by this library:
 ;;
-;;   `server'.
+;;   None
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -231,11 +231,14 @@ See also `as-external-mode'."
 
 ;;;###autoload
 (define-minor-mode as-external-mode
-  "If non-nil check for if Emacs is used as external editor.
-When Emacs is used as an external editor for example to edit text
-areas on a web page viewed with Firefox this library tries to
-help to setup the buffer in a useful way. It may for example set
-major and minor modes for the buffer.
+  "If non-nil check if Emacs is called as external editor.
+When Emacs is called as an external editor for example to edit
+text areas on a web page viewed with Firefox this library tries
+to help to setup the buffer in a useful way. It may for example
+set major and minor modes for the buffer.
+
+This can for example be useful when blogging or writing comments
+on blogs.
 
 See `as-external-alist' for more information."
   :global t

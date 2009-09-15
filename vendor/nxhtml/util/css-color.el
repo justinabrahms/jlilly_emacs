@@ -69,6 +69,8 @@
 
 ;; 2009-01-11 Lennart Borgman
 ;;   - Minor code clean up.
+;; 2009-05-23 Lennart Borgman
+;;   - Let bound m1 and m2.
 
 ;;; Code:
 (eval-when-compile (require 'cl))
@@ -291,13 +293,14 @@
 				       (match-string-no-properties 0)
 				       :foreground
 				       (css-color-foreground-color
-                                      (match-string-no-properties 0)))))))
-   (,css-color-html-re
-    (0
-      (let ((color (cadr (assoc (capitalize (match-string-no-properties 0)) css-color-html-colors))))
-      (put-text-property (match-beginning 0)
-                         (match-end 0)
-                         'keymap css-color-generic-map)
+                                     (match-string-no-properties 0)))))))
+  (,css-color-html-re
+   (0
+     (let ((color
+           (css-color-string-name-to-hex (match-string-no-properties 0))))
+     (put-text-property (match-beginning 0)
+                        (match-end 0)
+                        'keymap css-color-generic-map)
 	(put-text-property (match-beginning 0)
 			   (match-end 0)
 			   'color-type 'name)
@@ -579,13 +582,14 @@ Returns a list of values in the range of 0 to 255.
 
 ;; Source: hsl
 (defun css-color-hsl-to-rgb-fractions (h s l)
-  (if (<= l 0.5)
-      (setq m2 (* l (+ s 1)))
-    (setq m2 (- (+ l s) (* l s))))
-  (setq m1 (- (* l 2) m2))
-  (values (css-color-hue-to-rgb m1 m2 (+ h (/ 1 3.0)))
-	  (css-color-hue-to-rgb m1 m2 h)
-	  (css-color-hue-to-rgb m1 m2 (- h (/ 1 3.0)))))
+  (let (m1 m2)
+    (if (<= l 0.5)
+	(setq m2 (* l (+ s 1)))
+      (setq m2 (- (+ l s) (* l s))))
+    (setq m1 (- (* l 2) m2))
+    (values (css-color-hue-to-rgb m1 m2 (+ h (/ 1 3.0)))
+	    (css-color-hue-to-rgb m1 m2 h)
+	    (css-color-hue-to-rgb m1 m2 (- h (/ 1 3.0))))))
 
 (defun css-color-hsl-to-rgb (h s l)
   (multiple-value-bind (r g b)
@@ -814,13 +818,13 @@ Return list of point and color-type."
      (propertize
      (funcall
       (intern-soft
-      (format "css-color-string-%s-to-%s"
-             type
-             (css-color-next-type type)))
-      (capitalize color))
-    'keymap (if (eq (css-color-next-type type) 'hex)
-               css-color-map
-               css-color-generic-map)     'rear-nonsticky t))
+     (format "css-color-string-%s-to-%s"
+            type
+            (css-color-next-type type)))
+      color)
+   'keymap (if (eq (css-color-next-type type) 'hex)
+              css-color-map
+              css-color-generic-map)     'rear-nonsticky t))
     (goto-char beg)))
 
 (defun css-color-string-hex-to-hsl (str)
@@ -840,13 +844,17 @@ Return list of point and color-type."
 (defun css-color-string-rgb-to-name (str)
   (let ((color (css-color-string-rgb-to-hex str)))
     (or (car (rassoc (list (upcase color)) css-color-html-colors)) ;if name ok
-	color)))				  ;else return hex
-
-(defun css-color-string-name-to-hex (str)
-  (cadr (assoc str css-color-html-colors)))
-
-(defun css-color-string-rgb-to-hex (str)
-  (save-match-data
+      color)))                                  ;else return hex
+ (defun css-color-string-name-to-hex (str)
+  (let ((str (downcase str)))
+    (cadr (assoc-if
+	   (lambda (a)
+	     (string=
+	      (downcase a)
+	      str))
+	   css-color-html-colors))))
+ (defun css-color-string-rgb-to-hex (str)
+ (save-match-data
     (string-match css-color-rgb-re str)
     (concat "#"
 	    (apply 'css-color-rgb-to-hex

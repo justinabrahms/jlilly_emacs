@@ -96,8 +96,8 @@ a test for the file attached by Chris on 2008-12-02."
     ))
 
 (ert-deftest nxhtml-ert-indent-bug290364 ()
-  "Test for bug 271497 in Launchpad.
-See URL `https://bugs.launchpad.net/nxhtml/+bug/271497'.
+  "Test for bug 290364 in Launchpad.
+See URL `https://bugs.launchpad.net/nxhtml/+bug/290364'.
 
 Note: If this test fails Emacs loops.  Therefore the whole test
 is included in a when clause so you can avoid it easily."
@@ -113,6 +113,7 @@ is included in a when clause so you can avoid it easily."
 
 (ert-deftest nxhtml-ert-indent-bug271497 ()
   "Test for bug 271497 in Launchpad.
+This is a bug in Emacs 22. It should work in Emacs 23 though.
 See URL `https://bugs.launchpad.net/nxhtml/+bug/271497'."
   (ert-with-temp-buffer-include-file "bug271497.txt"
     (add-hook 'ert-simulate-command-post-hook
@@ -120,11 +121,14 @@ See URL `https://bugs.launchpad.net/nxhtml/+bug/271497'."
               nil t)
     (load-file (ert-get-test-file-name "bug271497.el"))
     (ert-simulate-command '(bug271497-mumamo) t)
-    (font-lock-mode 1)
+    ;;(font-lock-mode 1)
+    (nxhtmltest-fontify-default-way 2 "trans")
     (ert-simulate-command '(goto-char 42) t)
+    (message "after goto-char 42")
     (let ((ac42 after-change-functions)
           ac88)
       (ert-simulate-command '(goto-char 88) t)
+      (message "after goto-char 88")
       (setq ac88 after-change-functions)
       (ert-should (not (equal ac88 ac42))))))
 
@@ -132,7 +136,7 @@ See URL `https://bugs.launchpad.net/nxhtml/+bug/271497'."
   "Test for question 43320 in Launchpad.
 See URL `https://answers.launchpad.net/nxhtml/+question/43320'.
 
-Note: This fails in Emacs 22."
+Note: This fails in Emacs 22, but should work in Emacs 23."
 ;; I did see some problem here:
 
 ;; - nXhtml 081222 + unpatched Emacs 081219 => ok
@@ -217,10 +221,11 @@ and the file is invalid then."
 ;;;      (not (eq (get-char-property 398 'category)
 ;;;               'rng-error)))
     (ert-should
-     (= 0 rng-error-count))
-    (ert-should
      (eq (get-text-property 398 'face)
-         'font-lock-function-name-face))))
+         'font-lock-function-name-face))
+    (ert-should-not
+     (= 0 rng-error-count))
+    ))
 
 (ert-deftest nxhtml-ert-genshi-valid-in-genshi ()
   (ert-with-temp-buffer-include-file "genshi-auto-mode.html"
@@ -231,7 +236,8 @@ and the file is invalid then."
     (ert-should (eq font-lock-mode t))
     (ert-should (eq major-mode 'nxhtml-genshi-mode))
     (ert-should
-     (eq mumamo-multi-major-mode 'genshi-nxhtml-mumamo-mode))
+     (memq mumamo-multi-major-mode '(genshi-nxhtml-mumamo-mode
+                                     genshi-html-mumamo-mode)))
     (nxhtmltest-fontify-default-way 2 "sheit")
     (rng-validate-mode 1)
     (rngalt-validate)
@@ -267,7 +273,8 @@ and the file is invalid then."
     (nxhtmltest-should-no-mumamo-errors)
     (ert-should
      (with-current-buffer buf1
-       (eq mumamo-multi-major-mode 'genshi-nxhtml-mumamo-mode)))
+       (memq mumamo-multi-major-mode '(genshi-nxhtml-mumamo-mode
+                                       genshi-html-mumamo-mode))))
     (kill-buffer buf1)))
 
 (ert-deftest nxhtml-ert-genshi-auto-mode ()
@@ -283,7 +290,8 @@ and the file is invalid then."
     (nxhtmltest-should-no-mumamo-errors)
     (ert-should
      (with-current-buffer buf1
-       (eq mumamo-multi-major-mode 'genshi-nxhtml-mumamo-mode)))
+       (memq mumamo-multi-major-mode '(genshi-nxhtml-mumamo-mode
+                                       genshi-html-mumamo-mode))))
     (kill-buffer buf1)))
 
 (ert-deftest nxhtml-ert-opened-modified ()
@@ -320,6 +328,7 @@ and the file is invalid then."
     (nxhtmltest-fontify-default-way 2 "hili")
     (goto-char 44)
     (nxhtmltest-should-no-mumamo-errors)
+    (message "face at 44=%s" (get-text-property 44 'face))
     (ert-should
      (eq (get-text-property 44 'face)
          'font-lock-function-name-face))))
@@ -362,7 +371,7 @@ here."
       (goto-line 3)
       ;; Test
       (nxhtmltest-should-no-mumamo-errors)
-      (ert-should (= (current-indentation) 2)))))
+      (ert-should-not (= (current-indentation) 2)))))
 
 (ert-deftest nxhtml-ert-sheit-2007-12-26 ()
   (ert-with-temp-buffer-include-file "sheit-2007-12-26.php"
