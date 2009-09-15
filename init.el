@@ -40,7 +40,7 @@
                    "cfg_ido"
                    "cfg_snippets"
                    "cfg_html"
-                  ;; "cfg_nxhtml"
+                   "cfg_nxhtml"
                    "cfg_lorem"
                    "cfg_scheme"
                    "cfg_git"
@@ -91,6 +91,12 @@
  '(magit-diff-add ((((class color) (background dark)) (:foreground "green"))))
  '(mmm-init-submode-face ((t (:background "pink" :foreground "black"))))
  '(mouse ((t (:background "white" :foreground "black"))))
+ '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode2 ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode3 ((((class color) (min-colors 88) (background dark)) nil)))
+ '(mumamo-background-chunk-submode4 ((((class color) (min-colors 88) (background dark)) nil)))
  '(paren-face-match-light ((((class color)) (:background "RGB333333"))))
  '(rst-level-1-face ((t (:background "grey85" :foreground "black"))) t)
  '(rst-level-2-face ((t (:background "grey78" :foreground "black"))) t)
