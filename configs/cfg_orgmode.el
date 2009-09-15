@@ -1,6 +1,5 @@
 ;; Configurations for orgmode
-(add-to-list 'load-path "~/.emacs.d/packages/org-mode/lisp")
-(require 'org-install)
+(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/lisp")
 
 ;; several of the methods that begin with 'sasha' come from
 ;; http://sachachua.com/wp/2007/12/22/a-day-in-a-life-with-org/
