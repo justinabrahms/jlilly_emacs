@@ -94,13 +94,15 @@
 
 
 ;; pymacs
-(autoload 'pymacs-apply "pymacs")
-(autoload 'pymacs-call "pymacs")
-(autoload 'pymacs-eval "pymacs" nil t)
-(autoload 'pymacs-exec "pymacs" nil t)
-(autoload 'pymacs-load "pymacs" nil t)
+;; (autoload 'pymacs-apply "pymacs")
+;; (autoload 'pymacs-call "pymacs")
+;; (autoload 'pymacs-eval "pymacs" nil t)
+;; (autoload 'pymacs-exec "pymacs" nil t)
+;; (autoload 'pymacs-load "pymacs" nil t)
+;; (eval-after-load "pymacs"
+;;   '(add-to-list 'pymacs-load-path "~/.emacs.d/packages/pymacs/"))
 
-(pymacs-load "ropemacs" "rope-")
+;; (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
 
 
@@ -259,7 +261,7 @@
 (global-set-key (kbd "C-c C-e") 'rgr/python-execute)
 
 (setq ipython-command "/usr/bin/ipython")
-(require 'ipython)
+;; (require 'ipython)
 
 
 (setq auto-mode-alist
