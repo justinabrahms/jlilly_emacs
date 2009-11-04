@@ -9,4 +9,4 @@
 (load-file "~/.emacs.d/themes/vibrant-ink/color-theme-vibrant-ink.el")
 (load-file "~/.emacs.d/themes/inkpot.el")
 (load-file "~/.emacs.d/themes/brookstream/brookstream.el")
-(color-theme-brookstream)
+(color-theme-vibrant-ink)
