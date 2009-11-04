@@ -61,3 +61,6 @@
 [submodule "vendor/dpaste-el"]
 	path = vendor/dpaste-el
 	url = git://github.com/gregnewman/dpaste.el.git
+[submodule "packages/pymacs"]
+	path = packages/pymacs
+	url = git://pymacs.progiciels-bpi.ca/pymacs/
