@@ -5,7 +5,8 @@
 (setq load-path (cons "~/.emacs.d/" load-path))
 (setq load-path (cons "~/.emacs.d/configs/" load-path))
 (setq load-path (cons "~/.emacs.d/vendor/" load-path))
-(setq load-path (cons "/usr/share/emacs/site-lisp/w3m/" load-path))
+(setq load-path (cons "~/.emacs.d/packages/pymacs/" load-path))
+
 
 (defconst emacs-config-dir "~/.emacs.d/configs/")
 (defconst emacs-vendor-dir "~/.emacs.d/vendor/")
