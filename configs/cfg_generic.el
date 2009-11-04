@@ -44,7 +44,7 @@
 (menu-bar-mode -1)
 (when (featurep 'x) ;; when its gui..
   (tool-bar-mode -1) ;; hide the excess chrome
-  (scroll-bar-mode -1)) ;; and turn of scrollbars
+  (scroll-bar-mode -1)) ;; and turn off scrollbars
 (show-paren-mode +1) ;; show paired parenthasis
 (delete-selection-mode +1) ;; delete words if they are selected and you start typing
 (auto-compression-mode +1) ;; auto compress/decompress files
@@ -98,10 +98,14 @@
 (when (fboundp 'org-mode)
  (add-to-list 'auto-mode-alist '("/TODO\\'" . org-mode)))
 
-(when (string= "mac" window-system)
+(when (or
+       (string= "mac" window-system)
+       (string= "ns" window-system))
   ;; Mac-Specific Settings
   (set-default-font
-   "-apple-andale mono-medium-r-normal--12-100-72-72-m-100-iso10646-1"))
+   "-*-Monaco-normal-r-*-*-12-102-120-120-c-*-iso8859-1")
+  (setq mac-command-modifier 'meta))
+
 (when (string= "x" window-system)
   ;; Linux-Specific Settings
   (set-default-font
