@@ -64,3 +64,6 @@
 [submodule "packages/pymacs"]
 	path = packages/pymacs
 	url = git://pymacs.progiciels-bpi.ca/pymacs/
+[submodule "vendor/zencoding"]
+	path = vendor/zencoding
+	url = git://github.com/chrisdone/zencoding.git
