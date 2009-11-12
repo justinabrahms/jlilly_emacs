@@ -47,21 +47,21 @@
 
 
 ;; flymake + pylint
-;;
+;; 
 ;; This doesn't work with buildout & syspath wierdness.
-;;
-;; (when (load "flymake" t)
-;;   (defun flymake-pylint-init ()
-;;     (let* ((temp-file (flymake-init-create-temp-buffer-copy
-;;                        'flymake-create-temp-inplace))
-;;            (local-file (file-relative-name
-;;                         temp-file
-;;                         (file-name-directory buffer-file-name))))
-;;       (list "epylint" (list local-file))))
-;;   (add-to-list 'flymake-allowed-file-name-masks
-;;                '("\\.py\\'" flymake-pylint-init)))
 
-;; (add-hook 'find-file-hook 'flymake-find-file-hook)
+(when (load "flymake" t)
+  (defun flymake-pylint-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "epylint" (list local-file))))
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pylint-init)))
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 
 ;; EXPERIMENTAL: via http://groups.google.com/group/comp.lang.python/msg/048168c675ff0c68
@@ -94,13 +94,13 @@
 
 
 ;; pymacs
-;; (autoload 'pymacs-apply "pymacs")
-;; (autoload 'pymacs-call "pymacs")
-;; (autoload 'pymacs-eval "pymacs" nil t)
-;; (autoload 'pymacs-exec "pymacs" nil t)
-;; (autoload 'pymacs-load "pymacs" nil t)
-;; (eval-after-load "pymacs"
-;;   '(add-to-list 'pymacs-load-path "~/.emacs.d/packages/pymacs/"))
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(eval-after-load "pymacs"
+  '(add-to-list 'pymacs-load-path "~/.emacs.d/packages/pymacs/"))
 
 ;; (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
@@ -260,11 +260,18 @@
     (py-execute-buffer)))
 (global-set-key (kbd "C-c C-e") 'rgr/python-execute)
 
-(setq ipython-command "/usr/bin/ipython")
-;; (require 'ipython)
-
+(setq ipython-command "/usr/local/bin/ipython")
+(require 'ipython)
 
 (setq auto-mode-alist
       (append '(("\\.txt$" . rst-mode)
                 ("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
+
+(defun add-to-pypath ()
+  (interactive)
+  (let
+      ((dir (read-directory-name "Directory to add to PYTHONPATH: ")))
+    (setenv "PYTHONPATH"
+            (concat
+             (getenv "PYTHONPATH") dir))))
