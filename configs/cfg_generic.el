@@ -196,5 +196,9 @@
                             (width . 100)
                             (height . 45)))
 
+(defun fixme ()
+  (interactive)
+  (find-grep "find . -type f -exec grep -nH -e \"\\(FIXME\\|TODO\\)\" {} /dev/null \\;"))
+
 ;; MISC CRAP
 (defalias 'qrr 'query-replace-regexp)
