@@ -1,1 +1,2 @@
-;(add-to-list 'auto-mode-alist '("\\.jsp$" . html-mode))
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode) ;; start on any markup modes
