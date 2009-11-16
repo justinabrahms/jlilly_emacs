@@ -67,3 +67,6 @@
 [submodule "vendor/zencoding"]
 	path = vendor/zencoding
 	url = git://github.com/chrisdone/zencoding.git
+[submodule "vendor/espresso"]
+	path = vendor/espresso
+	url = git://github.com/justinlilly/espresso.el.git
