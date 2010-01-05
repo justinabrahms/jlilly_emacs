@@ -42,6 +42,7 @@
                    "cfg_snippets"
                    "cfg_html"
                    ;; "cfg_nxhtml"
+                   "cfg_elpa"
                    "cfg_lorem"
                    "cfg_scheme"
                    "cfg_git"
