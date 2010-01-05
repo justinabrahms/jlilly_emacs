@@ -2,6 +2,7 @@
 (prefer-coding-system 'utf-8) ;; use UTF-8
 
 (setq user-temporary-file-directory "/tmp/")
+(require 'saveplace)
 
 (setq
  backup-by-copying t ;; fix for Transmitt to work
