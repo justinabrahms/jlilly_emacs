@@ -102,6 +102,8 @@
   (global-set-key (kbd "C-x C-b") 'ibuffer))
 (when (fboundp 'org-mode)
  (add-to-list 'auto-mode-alist '("/TODO\\'" . org-mode)))
+(when (fboundp 'markdown-mode)
+  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
 (when (or
        (string= "mac" window-system)
