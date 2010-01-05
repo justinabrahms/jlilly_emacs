@@ -5,6 +5,8 @@
 (require 'saveplace)
 
 (setq
+ ispell-program-name "aspell"
+ ispell-extra-args '("--sug-mode=ultra")
  backup-by-copying t ;; fix for Transmitt to work
  backup-by-copying-when-linked t ;; preserve hard links
  backup-by-copying-when-mismatch t ;; preserve owner:group
