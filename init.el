@@ -43,6 +43,7 @@
                    "cfg_html"
                    ;; "cfg_nxhtml"
                    "cfg_elpa"
+                   "erlang"
                    "cfg_lorem"
                    "cfg_scheme"
                    "cfg_git"
