@@ -14,11 +14,13 @@
  column-number-mode t
  transient-mark-mode t ;; show selections
  indicate-empty-lines t
+ history-length t ;; infinite history
  color-theme-is-global t
  magit-auto-update t
  magit-collapse-threshold nil
  save-place-file "~/saveplace" ;; keep my ~/ clean
  truncate-partial-width-windows nil
+ 
 
  set-mark-command-repeat-pop t ; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
 
@@ -143,6 +145,8 @@
 (require 'rst) ;; require ReST mode
 ;(require 'textmate) ;; defunkt's textmate.el
 ;(textmate-mode)
+(require 'undo-tree)
+(global-undo-tree-mode)
 (require 'dpaste)
 (require 'jira)
 (winner-mode t) ;; turn on saved buffer configs
