@@ -42,7 +42,7 @@
  ido-save-directory-list-file "~/.emacs.d/ido.last"
  ido-use-filename-at-point t
  ido-use-url-at-point t
-)
+ )
 
 
 
@@ -72,24 +72,15 @@
       ;; A major mode supports eldoc iff it defines
       ;; `eldoc-documentation-function'.
       '(emacs-lisp-mode-hook ielm-mode-hook))
-(when (fboundp 'paredit-mode)
-  (mapc (lambda (x)
-          (add-hook x 'enable-paredit-mode))
-        '(emacs-lisp-mode-hook ielm-mode-hook
-          lisp-mode-hook inferior-lisp-mode-hook
-          slime-repl-mode-hook
-          scheme-mode-hook inferior-scheme-mode-hook
-          haskell-mode-hook literate-haskell-mode-hook inferior-haskell-mode-hook
-          python-mode-hook inferior-python-mode-hook)))
 (when (fboundp 'slime-mode)
   (add-hook 'lisp-mode-hook 'slime-mode))
 (mapc (lambda (major-mode) ; Similar to http://emacswiki.org/wiki/PrettyLambda
         (font-lock-add-keywords major-mode
-          `(("(\\(lambda\\)\\>"
-             (0 (prog1 ()
-                  (compose-region (match-beginning 1)
-                                  (match-end 1)
-                                  ,(make-char 'greek-iso8859-7 107))))))))
+                                `(("(\\(lambda\\)\\>"
+                                   (0 (prog1 ()
+                                        (compose-region (match-beginning 1)
+                                                        (match-end 1)
+                                                        ,(make-char 'greek-iso8859-7 107))))))))
       '(emacs-lisp-mode
         inferior-emacs-lisp-mode
         lisp-mode
@@ -101,7 +92,7 @@
 (when (fboundp 'ibuffer)
   (global-set-key (kbd "C-x C-b") 'ibuffer))
 (when (fboundp 'org-mode)
- (add-to-list 'auto-mode-alist '("/TODO\\'" . org-mode)))
+  (add-to-list 'auto-mode-alist '("/TODO\\'" . org-mode)))
 (when (fboundp 'markdown-mode)
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode)))
 
@@ -145,8 +136,8 @@
 
 ;; One of Apps
 (require 'rst) ;; require ReST mode
-;(require 'textmate) ;; defunkt's textmate.el
-;(textmate-mode)
+                                        ;(require 'textmate) ;; defunkt's textmate.el
+                                        ;(textmate-mode)
 (require 'undo-tree)
 (global-undo-tree-mode)
 (require 'dpaste)
@@ -168,9 +159,9 @@
 ;; full screen toggle using command+[RET]
 (defun toggle-fullscreen ()
   (interactive)
-    (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
-                                               nil
-                                               'fullboth)))
+  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
+                                           nil
+                                         'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen)
 
 ;; Increase/Decrease font size on the fly
@@ -188,11 +179,11 @@
                       nil
                       :height
                       (floor (* 0.9
-                                  (face-attribute 'default :height)))))
+                                (face-attribute 'default :height)))))
 (global-set-key (kbd "C-+") 'ryan/increase-font-size)
 (global-set-key (kbd "C--") 'ryan/decrease-font-size)
 
-;Reload .emacs on the fly
+                                        ;Reload .emacs on the fly
 (defun reload-dot-emacs()
   (interactive)
   (if(bufferp (get-file-buffer ".emacs"))
