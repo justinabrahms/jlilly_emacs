@@ -27,4 +27,4 @@
 ; - hober
 ; - renegade
 
-(color-theme-vibrant-ink)
+(color-theme-andreas)
