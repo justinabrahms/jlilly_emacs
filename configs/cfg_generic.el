@@ -101,7 +101,8 @@
        (string= "ns" window-system))
   ;; Mac-Specific Settings
   (set-default-font
-   "-*-Monaco-normal-r-*-*-12-102-120-120-c-*-iso8859-1")
+   ;; To get a font list, type xfontsel in console when the X11 server is running
+   "-*-Monaco-normal-r-*-*-10-102-120-120-c-*-iso8859-1")
   (setq mac-command-modifier 'meta))
 
 (when (string= "x" window-system)
