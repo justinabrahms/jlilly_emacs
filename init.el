@@ -70,6 +70,8 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(calendar-mark-holidays-flag t)
+ '(desktop-base-file-name "emacs.desktop")
+ '(desktop-save t)
  '(egg-enable-tooltip t)
  '(erc-modules (quote (autojoin button completion fill irccontrols match menu netsplit noncommands readonly ring services stamp track)))
  '(highlight-current-line-globally t nil (highlight-current-line))
@@ -94,7 +96,7 @@
  '(erc-notice-face ((t (:weight normal))))
  '(flymake-errline ((((class color)) (:background "Red" :weight bold))))
  '(flymake-warnline ((((class color)) (:underline "orange" :slant italic :weight bold))))
- '(highlight-current-line-face ((t (:background "#333333"))))
+ '(highlight-current-line-face ((t (:background "CCCCCC"))))
  '(ido-first-match ((t (:background "Blue" :foreground "white"))))
  '(ido-only-match ((((class color)) (:foreground "Blue"))))
  '(italic ((t (:slant normal))))
