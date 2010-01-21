@@ -17,6 +17,12 @@
 ;The generic apropos (of any symbol) is MUCH more useful than apropos-command
 (global-set-key "\C-ha" 'apropos)
 
+; Vim style keyboard moving
+(global-set-key (kbd "C-M-l") 'windmove-right)
+(global-set-key (kbd "C-M-h") 'windmove-left)
+(global-set-key (kbd "C-M-j") 'windmove-down)
+(global-set-key (kbd "C-M-k") 'windmove-up)
+
 ;Suspend-frame is stupid
 (global-set-key "\C-z" 'ignore)
 (global-set-key "\C-x\C-z" 'ignore)
