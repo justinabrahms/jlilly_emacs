@@ -2,6 +2,7 @@
 ;; code following
 ;; code folding
 
+(setq load-path (cons "/usr/local/Cellar/emacs/23.1/share/emacs/23.1/lisp/international/" load-path))
 (setq load-path (cons "~/.emacs.d/" load-path))
 (setq load-path (cons "~/.emacs.d/configs/" load-path))
 (setq load-path (cons "~/.emacs.d/vendor/" load-path))
@@ -96,7 +97,6 @@
  '(erc-notice-face ((t (:weight normal))))
  '(flymake-errline ((((class color)) (:background "Red" :weight bold))))
  '(flymake-warnline ((((class color)) (:underline "orange" :slant italic :weight bold))))
- '(highlight-current-line-face ((t (:background "CCCCCC"))))
  '(ido-first-match ((t (:background "Blue" :foreground "white"))))
  '(ido-only-match ((((class color)) (:foreground "Blue"))))
  '(italic ((t (:slant normal))))
