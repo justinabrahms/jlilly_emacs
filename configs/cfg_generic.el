@@ -157,14 +157,6 @@
 (display-time) ;; shows datetime in the mode line
 
 
-;; full screen toggle using command+[RET]
-(defun toggle-fullscreen ()
-  (interactive)
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
-                                           nil
-                                         'fullboth)))
-(global-set-key [(meta return)] 'toggle-fullscreen)
-
 ;; Increase/Decrease font size on the fly
 ;; Taken from: http://is.gd/iaAo
 (defun ryan/increase-font-size ()
