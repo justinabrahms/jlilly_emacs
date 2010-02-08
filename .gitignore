@@ -1,6 +1,5 @@
 .DS_Store
 *.elc
-packages/js2-mode/build/
 *~
 *#*
 games/
@@ -11,3 +10,6 @@ ido.last
 emacs.desktop
 elpa
 abbrev_defs
+packages/js2-mode/build/
+packages/cedet-1.0pre6/
+packages/ecb-2.40/
