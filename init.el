@@ -53,6 +53,7 @@
                    "cfg_git"
                    "cfg_diredx"
                    "cfg_orgmode"
+                   "clojure"
                    "cfg_slime"
                    "cfg_keybindings"
                    "cfg_erc"
@@ -65,6 +66,7 @@
                    "cfg_eshell"
                    "cfg_color-theme"
                    "cfg_autocomplete"
+                   "cfg_highlight_current_line"
                    "cfg_lisp"
                    ;; "cedet"
                    ;; "cfg_ecb"
@@ -129,3 +131,13 @@
 (put 'set-goal-column 'disabled nil)
 
 (put 'narrow-to-region 'disabled nil)
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

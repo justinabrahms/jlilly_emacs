@@ -26,5 +26,6 @@
 ; - deep blue
 ; - hober
 ; - renegade
+; - merbivore
 
-(color-theme-andreas)
+(color-theme-merbivore)
