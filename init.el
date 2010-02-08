@@ -6,7 +6,9 @@
 (setq load-path (cons "~/.emacs.d/" load-path))
 (setq load-path (cons "~/.emacs.d/configs/" load-path))
 (setq load-path (cons "~/.emacs.d/vendor/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/" load-path))
 (setq load-path (cons "~/.emacs.d/packages/pymacs/" load-path))
+(setq load-path (cons "~/.emacs.d/packages/ecb-2.40/" load-path))
 
 
 (defconst emacs-config-dir "~/.emacs.d/configs/")
@@ -63,6 +65,8 @@
                    "cfg_color-theme"
                    "cfg_autocomplete"
                    "cfg_lisp"
+                   ;; "cedet"
+                   ;; "cfg_ecb"
                    "cfg_last"))
 
 (custom-set-variables
@@ -73,6 +77,7 @@
  '(calendar-mark-holidays-flag t)
  '(desktop-base-file-name "emacs.desktop")
  '(desktop-save t)
+ '(ecb-options-version "2.40")
  '(egg-enable-tooltip t)
  '(erc-modules (quote (autojoin button completion fill irccontrols match menu netsplit noncommands readonly ring services stamp track)))
  '(highlight-current-line-globally t nil (highlight-current-line))
