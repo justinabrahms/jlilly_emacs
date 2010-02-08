@@ -1,9 +1,9 @@
 ;; ECB
-;(require 'ecb)
-;(setq ecb-tip-of-the-day nil)
-;(ecb-activate)
-;(ecb-toggle-ecb-windows)
-;
+(require 'ecb)
+(setq ecb-tip-of-the-day nil)
+(ecb-activate)
+(ecb-toggle-ecb-windows)
+
 ;(define-key global-map  [f7]         'ecb-toggle-ecb-windows)
 ;
 ;(custom-set-faces
@@ -13,6 +13,6 @@
 ; '(ecb-analyse-face ((((class color) (background dark)) (:inherit ecb-default-highlight-face :background "DarkSlateBlue" :foreground "white")))))
 ;
 ;;; Excludes some files from ecb
-;'(ecb-source-file-regexps (quote ((".*" 
-;          ("\\(^\\(\\.\\|#\\)\\|\\(~$\\|\\.\\(pyc\\|elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)") 
-;          ("^\\.\\(emacs\\|gnus\\)$")))))
+'(ecb-source-file-regexps (quote ((".*"
+         ("\\(^\\(\\.\\|#\\)\\|\\(~$\\|\\.\\(pyc\\|elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)")
+         ("^\\.\\(emacs\\|gnus\\)$")))))
