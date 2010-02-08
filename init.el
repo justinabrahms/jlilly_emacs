@@ -23,13 +23,14 @@
                          (list (car fa))))
                         (directory-files-and-attributes directory))))
 
-(defun add-vendors-to-loadpath ()
+(defun add-dirs-to-loadpath (dir-name)
   "add subdirs of your vendor directory to the load path"
-  (dolist (subdir (get-subdirs emacs-vendor-dir))
-    (setq load-path (cons (concat emacs-vendor-dir subdir) load-path))
+  (dolist (subdir (get-subdirs dir-name))
+    (setq load-path (cons (concat dir-name subdir) load-path))
     (message "Added %s to load path" subdir)))
 
-(add-vendors-to-loadpath)
+(add-dirs-to-loadpath emacs-vendor-dir)
+(add-dirs-to-loadpath "~/.emacs.d/elpa/")
 
 
 (defun load-cfg-files (filelist)
