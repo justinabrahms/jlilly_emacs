@@ -14,6 +14,10 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;(define-key python-mode-map "" (quote newline-and-indent))
+(global-set-key "\M-?" 'etags-select-find-tag-at-point)
+(global-set-key "\M-." 'etags-select-find-tag)
+
 ;The generic apropos (of any symbol) is MUCH more useful than apropos-command
 (global-set-key "\C-ha" 'apropos)
 
