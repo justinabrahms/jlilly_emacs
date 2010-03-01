@@ -1,5 +1,5 @@
-;; ALTER DEFAULT BEHAVIOR
-(prefer-coding-system 'utf-8) ;; use UTF-8
+;; alter default behavior
+(prefer-coding-system 'utf-8) ;; use utf-8
 
 (setq user-temporary-file-directory "/tmp/")
 (require 'saveplace)
