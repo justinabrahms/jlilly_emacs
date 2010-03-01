@@ -151,6 +151,8 @@
 (require 'browse-kill-ring)
 (require 'vernacular-time)
 (browse-kill-ring-default-keybindings)
+(require 'etags-table)
+(require 'etags-select)
 ;; (require 'ectags)
 
 ;; VISUAL DISPLAY
