@@ -28,4 +28,4 @@
 ; - renegade
 ; - merbivore
 
-(color-theme-blipp-blopp)
+(color-theme-blippblopp)
