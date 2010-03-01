@@ -5,6 +5,6 @@
                                         ; saddle brown
 (cond (window-system
        (custom-set-faces
-        '(highlight-current-line-face ((t (:background "#4f2f42")))))
+        '(highlight-current-line-face ((t (:background "#eee")))))
        (custom-set-variables
         '(highlight-current-line-globally t nil (highlight-current-line)))))
