@@ -20,31 +20,21 @@
  magit-collapse-threshold nil
  save-place-file "~/saveplace" ;; keep my ~/ clean
  truncate-partial-width-windows nil
- 
-
  set-mark-command-repeat-pop t ; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
-
  auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
-
  auto-save-file-name-transforms `((".*" ,user-temporary-file-directory t))
-
  display-time-day-and-date t ;; shows date in modeline
  inhibit-startup-message t ;; no splash screen
  show-trailing-whitespace t ;; show when there is excess space
- user-mail-address "justinlilly@gmail.com"
+ user-mail-address "justin@justinlilly.com"
  version-control t ;; user numbers for backups
  delete-old-versions t ;; silently delete extra backup versions
-
  default-tab-width 4 ;; a tab is 4 spaces
-
  ido-default-file-method 'selected-window
  ido-default-buffer-method ' selected-window
  ido-save-directory-list-file "~/.emacs.d/ido.last"
  ido-use-filename-at-point t
- ido-use-url-at-point t
- )
-
-
+ ido-use-url-at-point t)
 
 (menu-bar-mode -1)
 (when (featurep 'x) ;; when its gui..
