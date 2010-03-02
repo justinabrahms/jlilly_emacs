@@ -40,6 +40,7 @@
     (message "Loaded config file: %s" file)))
 
 (load-cfg-files '("cfg_generic"
+                   "cfg_php"
                    "cfg_python"
                    "cfg_tramp"
                    "cfg_ido"
