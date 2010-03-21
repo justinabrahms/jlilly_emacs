@@ -76,6 +76,3 @@
 [submodule "vendor/clojure-mode"]
 	path = vendor/clojure-mode
 	url = git://github.com/jochu/clojure-mode.git
-[submodule "vendor/slime"]
-	path = vendor/slime
-	url = git://git.boinkor.net/slime.git
