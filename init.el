@@ -55,7 +55,7 @@
                    "cfg_diredx"
                    "cfg_orgmode"
                    "clojure"
-                   "cfg_slime"
+                   ;; "cfg_slime"
                    "cfg_keybindings"
                    "cfg_erc"
                    "cfg_css-mode"
