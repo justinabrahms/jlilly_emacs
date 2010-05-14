@@ -98,7 +98,7 @@
 (when (string= "x" window-system)
   ;; Linux-Specific Settings
   (set-default-font
-   "-unknown-ProggyCleanTT-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"))
+   "-*-andale mono-normal-r-*-*-13-*-*-*-*-*-iso8859-1"))
 
 (setq-default
  org-log-done "note" ;; prompt for an org note when marking things as done
