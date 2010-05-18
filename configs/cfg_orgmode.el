@@ -29,7 +29,7 @@
 ;; resume clocking time when emacs is started
 (setq org-clock-persistence-insinuate)
 ;; Don't put that file in my checkin. Put it with the other private stuff
-(setq org-clock-persist-file "~/private/org/org-clock-save.el")
+(setq org-clock-persist-file "~/docs/org/org-clock-save.el")
 
 ;; Yes it's long... but more is better ;)
 (setq org-clock-history-length 35)
@@ -52,7 +52,7 @@
 ; copy org attachments
 (setq org-attach-method 'cp)
 ; set copy directory
-(setq org-attach-directory "~/private/org/data")
+(setq org-attach-directory "~/docs/org/data")
 ; underline the line in the agenda that you are on
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
  
@@ -74,11 +74,11 @@
 
 ;; set up remember to use org mode
 (org-remember-insinuate)
-(setq org-directory "~/private/org/")
+(setq org-directory "~/docs/org/")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cr" 'org-remember)
 
-(setq org-agenda-files (quote ("~/private/org")))
+(setq org-agenda-files (quote ("~/docs/org")))
 
 ;; Start clock if a remember buffer includes :CLOCK-IN:
 (add-hook 'remember-mode-hook 'my-start-clock-if-needed 'append)
