@@ -1,0 +1,1 @@
+(setq haml-backspace-backdents-nesting nil)
