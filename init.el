@@ -60,6 +60,7 @@
                    "cfg_erc"
                    "cfg_css-mode"
                    "cfg_javascript"
+                   "cfg_haml"
                    "cfg_server"
                    "cfg_uniquify"
                    "cfg_calendar"
@@ -67,11 +68,14 @@
                    "cfg_eshell"
                    "cfg_color-theme"
                    "cfg_autocomplete"
-                   "cfg_highlight_current_line"
                    "cfg_lisp"
                    ;; "cedet"
                    ;; "cfg_ecb"
                    "cfg_last"))
+
+(if (memq window-system '(x w32 mac))
+    ;; load if not in console
+    (load-cfg-files '("cfg_highlight_current_line")))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
