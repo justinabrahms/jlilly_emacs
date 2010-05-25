@@ -145,6 +145,11 @@
 (require 'etags-select)
 ;; (require 'ectags)
 
+(autoload 'markdown-mode "markdown-mode.el"
+  "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 ;; VISUAL DISPLAY
 (display-time) ;; shows datetime in the mode line
 
