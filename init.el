@@ -110,6 +110,7 @@
  '(erc-notice-face ((t (:weight normal))))
  '(flymake-errline ((((class color)) (:background "Red" :weight bold))))
  '(flymake-warnline ((((class color)) (:underline "orange" :slant italic :weight bold))))
+ '(highlight-current-line-face ((t (:background "midnight black"))))
  '(ido-first-match ((t (:background "Blue" :foreground "white"))))
  '(ido-only-match ((((class color)) (:foreground "Blue"))))
  '(italic ((t (:slant normal))))

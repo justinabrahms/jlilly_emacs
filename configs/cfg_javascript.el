@@ -1,5 +1,4 @@
 ;;; stolen from starter-kit-js.el
-(require 'espresso)
 (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 (add-hook 'espresso-mode-hook 'idle-highlight)
