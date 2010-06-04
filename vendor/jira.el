@@ -50,7 +50,7 @@
 (require 'cl)
 (require 'xml-rpc)
 
-(defvar jira-url "https://jira.hugeinc.com/rpc/xmlrpc"
+(defvar jira-url nil
   "URL to JIRA XML-RPC server")
 
 (defvar jira-token nil
