@@ -134,6 +134,7 @@
 (global-undo-tree-mode)
 (require 'dpaste)
 (require 'jira)
+(setq-default jira-url "http://jira.invitemedia.com/rpc/xmlrpc")
 (winner-mode t) ;; turn on saved buffer configs
 (require 'smooth-scrolling) ;; stop text from jumping on scroll.
 (require 'smex)
