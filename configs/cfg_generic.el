@@ -34,7 +34,8 @@
  ido-default-buffer-method ' selected-window
  ido-save-directory-list-file "~/.emacs.d/ido.last"
  ido-use-filename-at-point t
- ido-use-url-at-point t)
+ ido-use-url-at-point t
+ multi-term-program "/bin/bash")
 
 (menu-bar-mode -1)
 (when (featurep 'x) ;; when its gui..
@@ -143,6 +144,7 @@
 (browse-kill-ring-default-keybindings)
 (require 'etags-table)
 (require 'etags-select)
+(require 'multi-term)
 ;; (require 'ectags)
 
 (autoload 'markdown-mode "markdown-mode.el"
@@ -152,7 +154,6 @@
 
 ;; VISUAL DISPLAY
 (display-time) ;; shows datetime in the mode line
-
 
 ;; Increase/Decrease font size on the fly
 ;; Taken from: http://is.gd/iaAo
