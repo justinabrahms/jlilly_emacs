@@ -19,6 +19,19 @@
          )
       )
 
+
+;; Not happy that I have to specify the path to pdb. It should be on
+;; my path already. Need to find or write a `which` command for emacs.
+(setq pdb-path '/usr/bin/pdb
+      gud-pdb-command-name (symbol-name pdb-path))
+
+;; when running pdb, prepopulate the current buffer's name
+(defadvice pdb (before gud-query-cmdline activate)
+  "Provide a better default command line when called interactively."
+  (interactive
+   (list (gud-query-cmdline pdb-path
+			    (file-name-nondirectory buffer-file-name)))))
+
 ;; highlight all characters beyond col #80
 (require 'highlight-80+)
 
