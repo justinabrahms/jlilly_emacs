@@ -70,9 +70,9 @@
                    "cfg_color-theme"
                    "cfg_autocomplete"
                    "cfg_lisp"
-	           "cfg_google"
                    ;; "cedet"
                    ;; "cfg_ecb"
+                   "cfg_google"
                    "cfg_last"))
 
 (if (memq window-system '(x w32 mac))
