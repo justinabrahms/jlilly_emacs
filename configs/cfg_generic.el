@@ -146,6 +146,7 @@
 (require 'etags-table)
 (require 'etags-select)
 (require 'multi-term)
+(require 'idle-highlight)
 ;; (require 'ectags)
 
 (autoload 'markdown-mode "markdown-mode.el"

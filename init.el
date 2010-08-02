@@ -58,6 +58,7 @@
                    ;; "cfg_slime"
                    "cfg_keybindings"
                    "cfg_erc"
+                   "cfg_rcirc"
                    "cfg_css-mode"
                    "cfg_javascript"
                    "cfg_haml"
@@ -69,6 +70,7 @@
                    "cfg_color-theme"
                    "cfg_autocomplete"
                    "cfg_lisp"
+	           "cfg_google"
                    ;; "cedet"
                    ;; "cfg_ecb"
                    "cfg_last"))
