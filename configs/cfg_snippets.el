@@ -1,4 +1,7 @@
 (require 'yasnippet)
+(require 'cl)
 (yas/initialize)
 (setq yas/root-directory "~/.emacs.d/snippets")
-(yas/load-directory yas/root-directory)
+(loop for dir in '("~/.emacs.d/snippets"
+                   "~/.emacs.d/vendor/yasnippet/snippets")
+      do (yas/load-directory dir))
