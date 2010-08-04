@@ -18,7 +18,7 @@
  color-theme-is-global t
  magit-auto-update t
  magit-collapse-threshold nil
- save-place-file (cons user-temporary-file-directory "saveplace") ;; keep my ~/ clean
+ save-place-file (concat user-temporary-file-directory "saveplace") ;; keep my ~/ clean
  truncate-partial-width-windows nil
  set-mark-command-repeat-pop t ; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
  auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
