@@ -58,6 +58,7 @@
                    ;; "cfg_slime"
                    "cfg_keybindings"
                    "cfg_erc"
+                   "cfg_rcirc"
                    "cfg_css-mode"
                    "cfg_javascript"
                    "cfg_haml"
@@ -71,6 +72,7 @@
                    "cfg_lisp"
                    ;; "cedet"
                    ;; "cfg_ecb"
+                   "cfg_google"
                    "cfg_last"))
 
 (if (memq window-system '(x w32 mac))

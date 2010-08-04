@@ -13,3 +13,4 @@ abbrev_defs
 packages/js2-mode/build/
 packages/cedet-1.0pre6/
 packages/ecb-2.40/
+configs/cfg_google.el
