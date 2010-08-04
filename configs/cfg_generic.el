@@ -18,7 +18,7 @@
  color-theme-is-global t
  magit-auto-update t
  magit-collapse-threshold nil
- save-place-file "~/saveplace" ;; keep my ~/ clean
+ save-place-file (cons user-temporary-file-directory "saveplace") ;; keep my ~/ clean
  truncate-partial-width-windows nil
  set-mark-command-repeat-pop t ; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
  auto-save-list-file-prefix (concat user-temporary-file-directory ".auto-saves-")
@@ -128,8 +128,8 @@
 
 ;; One of Apps
 (require 'rst) ;; require ReST mode
-                                        ;(require 'textmate) ;; defunkt's textmate.el
-                                        ;(textmate-mode)
+(require 'textmate) ;; defunkt's textmate.el
+(textmate-mode)
 (require 'undo-tree)
 (global-undo-tree-mode)
 (require 'dpaste)

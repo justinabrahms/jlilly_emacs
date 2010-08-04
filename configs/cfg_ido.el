@@ -23,4 +23,4 @@
   "Use ido to select a recently opened file from the `recentf-list`"
   (interactive)
   (find-file (ido-completing-read "Open file: " recentf-list nil t)))
-(global-set-key [(meta f11)] 'ido-choose-from-recent)
+(global-set-key [(meta f11)] 'ido-choose-from-recentf)
