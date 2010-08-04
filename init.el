@@ -35,9 +35,12 @@
 
 (defun load-cfg-files (filelist)
   (dolist (file filelist)
-    (load (expand-file-name
-           (concat emacs-config-dir file)))
-    (message "Loaded config file: %s" file)))
+    (let ((filename (expand-file-name (concat emacs-config-dir file ".el"))))
+      (if (file-exists-p filename)
+          (progn
+            (load (concat filename))
+            (message "Loaded config file: %s" filename))
+      	(message "Could not load file: %s" filename)))))
 
 (load-cfg-files '("cfg_generic"
                    "cfg_php"
