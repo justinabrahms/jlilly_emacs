@@ -35,6 +35,8 @@
  ido-save-directory-list-file "~/.emacs.d/ido.last"
  ido-use-filename-at-point t
  ido-use-url-at-point t
+ browse-url-generic-program "google-chrome"
+ browse-url-browser-function 'browse-url-generic
  multi-term-program "/bin/bash")
 
 (menu-bar-mode -1)
