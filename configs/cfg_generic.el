@@ -149,6 +149,8 @@
 (require 'etags-select)
 (require 'multi-term)
 (require 'idle-highlight)
+(require 'framemove)
+(setq framemove-hook-into-windmove t)
 ;; (require 'ectags)
 
 (autoload 'markdown-mode "markdown-mode.el"
