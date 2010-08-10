@@ -278,9 +278,6 @@
     (py-execute-buffer)))
 (global-set-key (kbd "C-c C-e") 'rgr/python-execute)
 
-(setq ipython-command "/usr/local/bin/ipython")
-(require 'ipython)
-
 (setq auto-mode-alist
       (append '(("\\.txt$" . rst-mode)
                 ("\\.rst$" . rst-mode)
