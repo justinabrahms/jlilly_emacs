@@ -35,6 +35,8 @@
  ido-save-directory-list-file "~/.emacs.d/ido.last"
  ido-use-filename-at-point t
  ido-use-url-at-point t
+ browse-url-generic-program "google-chrome"
+ browse-url-browser-function 'browse-url-generic
  multi-term-program "/bin/bash")
 
 (menu-bar-mode -1)
@@ -148,6 +150,8 @@
 (require 'multi-term)
 (require 'idle-highlight)
 (autoload 'scratch "scratch" nil t)
+(require 'framemove)
+(setq framemove-hook-into-windmove t)
 ;; (require 'ectags)
 
 (autoload 'markdown-mode "markdown-mode.el"
