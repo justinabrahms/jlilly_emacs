@@ -149,6 +149,7 @@
 (require 'etags-select)
 (require 'multi-term)
 (require 'idle-highlight)
+(autoload 'scratch "scratch" nil t)
 (require 'framemove)
 (setq framemove-hook-into-windmove t)
 ;; (require 'ectags)
