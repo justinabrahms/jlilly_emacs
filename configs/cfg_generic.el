@@ -147,6 +147,7 @@
 (require 'etags-select)
 (require 'multi-term)
 (require 'idle-highlight)
+(autoload 'scratch "scratch" nil t)
 ;; (require 'ectags)
 
 (autoload 'markdown-mode "markdown-mode.el"
