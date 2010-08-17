@@ -82,3 +82,9 @@
 [submodule "vendor/scratch-el"]
 	path = vendor/scratch-el
 	url = http://github.com/ieure/scratch-el.git
+[submodule "vendor/python-pep8"]
+	path = vendor/python-pep8
+	url = git://gist.github.com/303273.git
+[submodule "vendor/python-pylint"]
+	path = vendor/python-pylint
+	url = git://gist.github.com/302848.git
