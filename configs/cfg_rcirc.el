@@ -5,7 +5,7 @@
 (set-face-foreground 'rcirc-my-nick "red" nil)
 
 (setq
- rcirc-time-format "%Y.%m.%d %H:%M "
+ rcirc-time-format "%H:%M "
  rcirc-default-nick "justinlilly"
  rcirc-default-user-name "justinlilly"
  rcirc-default-full-name "Justin Lilly"
