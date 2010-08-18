@@ -88,3 +88,6 @@
 [submodule "vendor/python-pylint"]
 	path = vendor/python-pylint
 	url = git://gist.github.com/302848.git
+[submodule "vendor/js2-mode"]
+	path = vendor/js2-mode
+	url = git://github.com/mooz/js2-mode.git
