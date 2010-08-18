@@ -1,6 +1,10 @@
 ;;; python-mode site-lisp configuration
 (require 'python-mode)
 (autoload 'python-mode "python-mode" "Python Mode." t)
+(autoload 'python-pylint "python-pylint")
+(autoload 'pylint "python-pylint")
+(autoload 'python-pep8 "python-pep8")
+(autoload 'pep8 "python-pep8")
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
 (setq interpreter-mode-alist
