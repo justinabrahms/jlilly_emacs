@@ -101,8 +101,7 @@
 (when (string= "x" window-system)
   ;; Linux-Specific Settings
   (set-default-font
-   "-*-andale mono-normal-r-*-*-13-*-*-*-*-*-iso8859-1"))
-
+   "-unknown-Envy Code R-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1"))
 (setq-default
  org-log-done "note" ;; prompt for an org note when marking things as done
  truncate-lines t ;; truncate lines, not wrap
