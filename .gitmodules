@@ -91,3 +91,6 @@
 [submodule "vendor/js2-mode"]
 	path = vendor/js2-mode
 	url = git://github.com/mooz/js2-mode.git
+[submodule "vendor/thumb-through"]
+	path = vendor/thumb-through
+	url = http://github.com/apgwoz/thumb-through.git
